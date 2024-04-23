@@ -187,16 +187,16 @@ namespace WinFormsApp
             Products.Add(product001);
             Products.Add(product002);
 
-            buttonMenuItem001.Text = product001.Name;
-            buttonMenuItem002.Text = product002.Name;
+            buttonMenuItem001.Text = $"{Products.ElementAt(0).Name} ${Products.ElementAt(0).Price}";
+            buttonMenuItem002.Text = $"{Products.ElementAt(1).Name} ${Products.ElementAt(1).Price}";
 
             FormConfigure = new FormConfigure(Products);
         }
 
         private void UpdateMenuBasedOnNewProductsConfiguration()
         {
-            buttonMenuItem001.Text = Products.ElementAt(0).Name;
-            buttonMenuItem002.Text = Products.ElementAt(1).Name;
+            buttonMenuItem001.Text = $"{Products.ElementAt(0).Name} ${Products.ElementAt(0).Price}";
+            buttonMenuItem002.Text = $"{Products.ElementAt(1).Name} ${Products.ElementAt(1).Price}";
         }
 
         private Ticket GetActiveTicket()
