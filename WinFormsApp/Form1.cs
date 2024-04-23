@@ -158,32 +158,12 @@ namespace WinFormsApp
 
         private void buttonMenuItem001_Click(object sender, EventArgs e)
         {
-            Product product = new Product();
-            product.Name = "Quesadilla";
-            product.Price = 30;
-            listBoxTicket.Items.Add(product);
-
-            Ticket currentTicket = GetActiveTicket();
-            currentTicket.Products.Add(product);
-
-            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
-
-            buttonRemoveItemFromTicket.Enabled = Enabled;
+            AddProductToTheTicket("Quesadilla", 30);
         }
 
         private void buttonMenuItem002_Click(object sender, EventArgs e)
         {
-            Product product = new Product();
-            product.Name = "Milanesa";
-            product.Price = 60;
-            listBoxTicket.Items.Add(product);
-
-            Ticket currentTicket = GetActiveTicket();
-            currentTicket.Products.Add(product);
-
-            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
-
-            buttonRemoveItemFromTicket.Enabled = Enabled;
+            AddProductToTheTicket("Milanesa", 60);
         }
 
         private Ticket GetActiveTicket()
@@ -199,6 +179,21 @@ namespace WinFormsApp
             }
 
             return currentTicket;
+        }
+
+        private void AddProductToTheTicket(String name, int price)
+        {
+            Product product = new Product();
+            product.Name = name;
+            product.Price = price;
+            listBoxTicket.Items.Add(product);
+
+            Ticket currentTicket = GetActiveTicket();
+            currentTicket.Products.Add(product);
+
+            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
+
+            buttonRemoveItemFromTicket.Enabled = Enabled;
         }
     }
 }
