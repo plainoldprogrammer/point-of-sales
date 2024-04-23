@@ -49,8 +49,7 @@ namespace WinFormsApp
             buttonMenuItem001.Text = product001.Name;
             buttonMenuItem002.Text = product002.Name;
 
-            FormConfigure = new FormConfigure();
-            FormConfigure.Products = Products;
+            FormConfigure = new FormConfigure(Products);
             FormConfigure.ConfigureMenuEntries();
             FormConfigure.Text = "Configure";
         }

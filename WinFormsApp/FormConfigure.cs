@@ -10,9 +10,10 @@ namespace WinFormsApp
     {
         public List<Product> Products { get; set; }
 
-        public FormConfigure()
+        public FormConfigure(List<Product> products)
         {
             InitializeComponent();
+            Products = products;
         }
 
         public void ConfigureMenuEntries()
