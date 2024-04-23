@@ -41,6 +41,7 @@ namespace WinFormsApp
             buttonPreviousTicket = new Button();
             buttonNextTicket = new Button();
             labelTicketStatus = new Label();
+            buttonMenuItem002 = new Button();
             SuspendLayout();
             // 
             // listBoxTicket
@@ -132,11 +133,21 @@ namespace WinFormsApp
             labelTicketStatus.TabIndex = 9;
             labelTicketStatus.Text = "Ticket status:";
             // 
+            // buttonMenuItem002
+            // 
+            buttonMenuItem002.Location = new Point(331, 12);
+            buttonMenuItem002.Name = "buttonMenuItem002";
+            buttonMenuItem002.Size = new Size(90, 90);
+            buttonMenuItem002.TabIndex = 10;
+            buttonMenuItem002.Text = "Milanesa";
+            buttonMenuItem002.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 569);
+            Controls.Add(buttonMenuItem002);
             Controls.Add(labelTicketStatus);
             Controls.Add(buttonNextTicket);
             Controls.Add(buttonPreviousTicket);
@@ -165,5 +176,6 @@ namespace WinFormsApp
         private Button buttonPreviousTicket;
         private Button buttonNextTicket;
         private Label labelTicketStatus;
+        private Button buttonMenuItem002;
     }
 }
