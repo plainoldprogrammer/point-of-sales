@@ -186,9 +186,8 @@ namespace WinFormsApp
         {
             FormConfigure.ShowDialog();
             
-
             buttonMenuItem001.Text = Products.ElementAt(0).Name;
-             buttonMenuItem002.Text = Products.ElementAt(1).Name;
+            buttonMenuItem002.Text = Products.ElementAt(1).Name;
         }
 
         private Ticket GetActiveTicket()
