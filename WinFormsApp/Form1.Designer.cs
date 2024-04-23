@@ -63,9 +63,9 @@ namespace WinFormsApp
             // 
             buttonRemoveItemFromTicket.Location = new Point(12, 442);
             buttonRemoveItemFromTicket.Name = "buttonRemoveItemFromTicket";
-            buttonRemoveItemFromTicket.Size = new Size(94, 29);
+            buttonRemoveItemFromTicket.Size = new Size(117, 29);
             buttonRemoveItemFromTicket.TabIndex = 2;
-            buttonRemoveItemFromTicket.Text = "Remove";
+            buttonRemoveItemFromTicket.Text = "Remove Item";
             buttonRemoveItemFromTicket.UseVisualStyleBackColor = true;
             buttonRemoveItemFromTicket.Click += buttonRemoveItemFromTicket_Click;
             // 
