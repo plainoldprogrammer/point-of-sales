@@ -178,7 +178,22 @@ namespace WinFormsApp
 
         private void buttonMenuItem002_Click(object sender, EventArgs e)
         {
+            listBoxTicket.Items.Add("Milanesa");
 
+            Ticket currentTicket;
+            if (CurrentTicketIndex == (Tickets.Count + 1))
+            {
+                currentTicket = TicketDraft;
+            }
+            else
+            {
+                currentTicket = Tickets[CurrentTicketIndex - 1];
+            }
+            currentTicket.Products.Add("Milanesa");
+
+            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
+
+            buttonRemoveItemFromTicket.Enabled = Enabled;
         }
     }
 }
