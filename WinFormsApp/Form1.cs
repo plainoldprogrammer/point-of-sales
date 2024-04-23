@@ -1,6 +1,7 @@
 using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Text;
 
 namespace WinFormsApp
 {
@@ -21,6 +22,8 @@ namespace WinFormsApp
 
             buttonPreviousTicket.Enabled = false;
             buttonNextTicket.Enabled = false;
+
+            textBoxTicketsCount.Enabled = false;
         }
 
         private void menuItemButton01_Click(object sender, EventArgs e)
