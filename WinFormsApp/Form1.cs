@@ -20,6 +20,8 @@ namespace WinFormsApp
         {
             listBoxTicket.Items.Add("Quesadilla");
             Ticket.Products.Add("Quesadilla");
+
+            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}";
         }
 
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
@@ -40,6 +42,8 @@ namespace WinFormsApp
                 {
                     listBoxTicket.SelectedIndex = selectedIndex;
                 }
+
+                richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}";
             }
         }
 
