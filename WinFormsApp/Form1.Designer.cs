@@ -48,6 +48,7 @@
             menuItemButton01.TabIndex = 1;
             menuItemButton01.Text = "Quesadilla";
             menuItemButton01.UseVisualStyleBackColor = true;
+            menuItemButton01.Click += menuItemButton01_Click;
             // 
             // Form1
             // 
