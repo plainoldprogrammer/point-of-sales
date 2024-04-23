@@ -90,7 +90,7 @@ namespace WinFormsApp
                 Ticket currentTicket = Tickets[CurrentTicketIndex - 1];
 
                 listBoxTicket.Items.Clear();
-                foreach (string product in currentTicket.Products)
+                foreach (Product product in currentTicket.Products)
                 {
                     listBoxTicket.Items.Add(product);
                 }
@@ -120,7 +120,7 @@ namespace WinFormsApp
                 Ticket currentTicket = Tickets[CurrentTicketIndex - 1];
 
                 listBoxTicket.Items.Clear();
-                foreach (string product in currentTicket.Products)
+                foreach (Product product in currentTicket.Products)
                 {
                     listBoxTicket.Items.Add(product);
                 }
@@ -141,7 +141,7 @@ namespace WinFormsApp
                 Ticket currentTicket = TicketDraft;
 
                 listBoxTicket.Items.Clear();
-                foreach (string product in currentTicket.Products)
+                foreach (Product product in currentTicket.Products)
                 {
                     listBoxTicket.Items.Add(product);
                 }
@@ -158,7 +158,10 @@ namespace WinFormsApp
 
         private void buttonMenuItem001_Click(object sender, EventArgs e)
         {
-            listBoxTicket.Items.Add("Quesadilla");
+            Product product = new Product();
+            product.Name = "Quesadilla";
+            product.Price = 30;
+            listBoxTicket.Items.Add(product.Name);
 
             Ticket currentTicket;
             if (CurrentTicketIndex == (Tickets.Count + 1))
@@ -169,7 +172,7 @@ namespace WinFormsApp
             {
                 currentTicket = Tickets[CurrentTicketIndex - 1];
             }
-            currentTicket.Products.Add("Quesadilla");
+            currentTicket.Products.Add(product);
 
             richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
 
@@ -178,7 +181,10 @@ namespace WinFormsApp
 
         private void buttonMenuItem002_Click(object sender, EventArgs e)
         {
-            listBoxTicket.Items.Add("Milanesa");
+            Product product = new Product();
+            product.Name = "Milanesa";
+            product.Price = 60;
+            listBoxTicket.Items.Add(product.Name);
 
             Ticket currentTicket;
             if (CurrentTicketIndex == (Tickets.Count + 1))
@@ -189,7 +195,7 @@ namespace WinFormsApp
             {
                 currentTicket = Tickets[CurrentTicketIndex - 1];
             }
-            currentTicket.Products.Add("Milanesa");
+            currentTicket.Products.Add(product);
 
             richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
 

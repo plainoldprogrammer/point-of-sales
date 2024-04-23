@@ -5,7 +5,7 @@ namespace WinFormsApp
 {
     public class Ticket
     {
-        public List<String> Products { get; set; }
+        public List<Product> Products { get; set; }
         public int Total
         {
             get
@@ -21,7 +21,7 @@ namespace WinFormsApp
 
         public Ticket()
         {
-            Products = new List<String>();
+            Products = new List<Product>();
         }
     }
 }
