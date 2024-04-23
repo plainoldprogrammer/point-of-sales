@@ -31,25 +31,7 @@ namespace WinFormsApp
 
             labelTicketStatus.Text = "Ticket status: Draft";
 
-
-
-            Products = new List<Product>();
-
-            Product product001 = new Product();
-            product001.Name = "Refresco";
-            product001.Price = 24;
-
-            Product product002 = new Product();
-            product002.Name = "Taco";
-            product002.Price = 15;
-            
-            Products.Add(product001);
-            Products.Add(product002);
-
-            buttonMenuItem001.Text = product001.Name;
-            buttonMenuItem002.Text = product002.Name;
-
-            FormConfigure = new FormConfigure(Products);
+            ConfigureProducts();
         }
 
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
@@ -183,6 +165,27 @@ namespace WinFormsApp
         {
             FormConfigure.ShowDialog();
             UpdateMenuBasedOnNewConfiguration();
+        }
+
+        private void ConfigureProducts()
+        {
+            Products = new List<Product>();
+
+            Product product001 = new Product();
+            product001.Name = "Refresco";
+            product001.Price = 24;
+
+            Product product002 = new Product();
+            product002.Name = "Taco";
+            product002.Price = 15;
+
+            Products.Add(product001);
+            Products.Add(product002);
+
+            buttonMenuItem001.Text = product001.Name;
+            buttonMenuItem002.Text = product002.Name;
+
+            FormConfigure = new FormConfigure(Products);
         }
 
         private void UpdateMenuBasedOnNewConfiguration()
