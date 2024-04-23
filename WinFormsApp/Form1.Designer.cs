@@ -58,7 +58,7 @@ namespace WinFormsApp
             buttonMenuItem001.TabIndex = 1;
             buttonMenuItem001.Text = "Quesadilla";
             buttonMenuItem001.UseVisualStyleBackColor = true;
-            buttonMenuItem001.Click += menuItemButton01_Click;
+            buttonMenuItem001.Click += buttonMenuItem001_Click;
             // 
             // buttonRemoveItemFromTicket
             // 

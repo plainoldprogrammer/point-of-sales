@@ -24,9 +24,10 @@ namespace WinFormsApp
             buttonNextTicket.Enabled = false;
 
             textBoxTicketsCount.Enabled = false;
+            buttonRemoveItemFromTicket.Enabled = false;
         }
 
-        private void menuItemButton01_Click(object sender, EventArgs e)
+        private void buttonMenuItem001_Click(object sender, EventArgs e)
         {
             listBoxTicket.Items.Add("Quesadilla");
             TicketDraft.Products.Add("Quesadilla");
