@@ -2,6 +2,7 @@ using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace WinFormsApp
 {
@@ -11,6 +12,7 @@ namespace WinFormsApp
         public List<Ticket> Tickets { get; set; }
         public int CurrentTicketIndex { get; set; }
         public FormConfigure FormConfigure { get; set; }
+        public List<Product> Products { get; set; }
 
         public Form1()
         {
@@ -29,7 +31,27 @@ namespace WinFormsApp
 
             labelTicketStatus.Text = "Ticket status: Draft";
 
+
+
+            Products = new List<Product>();
+
+            Product product001 = new Product();
+            product001.Name = "Refresco";
+            product001.Price = 24;
+
+            Product product002 = new Product();
+            product002.Name = "Taco";
+            product002.Price = 15;
+            
+            Products.Add(product001);
+            Products.Add(product002);
+
+            buttonMenuItem001.Text = product001.Name;
+            buttonMenuItem002.Text = product002.Name;
+
             FormConfigure = new FormConfigure();
+            FormConfigure.Products = Products;
+            FormConfigure.ConfigureMenuEntries();
             FormConfigure.Text = "Configure";
         }
 
@@ -163,6 +185,10 @@ namespace WinFormsApp
         private void buttonConfigure_Click(object sender, EventArgs e)
         {
             FormConfigure.ShowDialog();
+            
+
+            buttonMenuItem001.Text = Products.ElementAt(0).Name;
+             buttonMenuItem002.Text = Products.ElementAt(1).Name;
         }
 
         private Ticket GetActiveTicket()
@@ -180,11 +206,10 @@ namespace WinFormsApp
             return currentTicket;
         }
 
-        private void AddProductToTheTicket(String name, int price)
+        private void AddProductToTheTicket(Product product)
         {
-            Product product = new Product();
-            product.Name = name;
-            product.Price = price;
+            product.Name = product.Name;
+            product.Price = product.Price;
             listBoxTicket.Items.Add(product);
 
             Ticket currentTicket = GetActiveTicket();
@@ -197,12 +222,12 @@ namespace WinFormsApp
 
         private void buttonMenuItem001_Click(object sender, EventArgs e)
         {
-            AddProductToTheTicket("Quesadilla", 30);
+            AddProductToTheTicket(Products.ElementAt(0));
         }
 
         private void buttonMenuItem002_Click(object sender, EventArgs e)
         {
-            AddProductToTheTicket("Milanesa", 60);
+            AddProductToTheTicket(Products.ElementAt(1));
         }
     }
 }
