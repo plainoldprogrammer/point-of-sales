@@ -142,10 +142,16 @@ namespace WinFormsApp
             else if (CurrentTicketIndex == Tickets.Count)
             {
                 CurrentTicketIndex++;
+                Ticket currentTicket = TicketDraft;
 
                 listBoxTicket.Items.Clear();
+                foreach (string product in currentTicket.Products)
+                {
+                    listBoxTicket.Items.Add(product);
+                }
+
                 textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
-                richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: $0";
+                richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${currentTicket.Total}";
 
                 buttonNextTicket.Enabled = false;
             }
