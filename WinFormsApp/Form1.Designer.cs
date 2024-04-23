@@ -152,6 +152,7 @@ namespace WinFormsApp
             buttonConfigure.TabIndex = 11;
             buttonConfigure.Text = "Configure";
             buttonConfigure.UseVisualStyleBackColor = true;
+            buttonConfigure.Click += buttonConfigure_Click;
             // 
             // Form1
             // 

@@ -195,5 +195,10 @@ namespace WinFormsApp
         {
             AddProductToTheTicket("Milanesa", 60);
         }
+
+        private void buttonConfigure_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
