@@ -53,7 +53,7 @@ namespace WinFormsApp
             // 
             buttonMenuItem001.Location = new Point(235, 12);
             buttonMenuItem001.Name = "buttonMenuItem001";
-            buttonMenuItem001.Size = new Size(94, 29);
+            buttonMenuItem001.Size = new Size(90, 90);
             buttonMenuItem001.TabIndex = 1;
             buttonMenuItem001.Text = "Quesadilla";
             buttonMenuItem001.UseVisualStyleBackColor = true;
