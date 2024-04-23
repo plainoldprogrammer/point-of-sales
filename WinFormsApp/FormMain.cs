@@ -50,8 +50,6 @@ namespace WinFormsApp
             buttonMenuItem002.Text = product002.Name;
 
             FormConfigure = new FormConfigure(Products);
-            FormConfigure.ConfigureMenuEntries();
-            FormConfigure.Text = "Configure";
         }
 
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
