@@ -187,8 +187,7 @@ namespace WinFormsApp
             Products.Add(product001);
             Products.Add(product002);
 
-            buttonMenuItem001.Text = $"{Products.ElementAt(0).Name} ${Products.ElementAt(0).Price}";
-            buttonMenuItem002.Text = $"{Products.ElementAt(1).Name} ${Products.ElementAt(1).Price}";
+            UpdateMenuBasedOnNewProductsConfiguration();
 
             FormConfigure = new FormConfigure(Products);
         }
