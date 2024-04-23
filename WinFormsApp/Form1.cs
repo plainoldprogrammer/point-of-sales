@@ -8,12 +8,15 @@ namespace WinFormsApp
     {
         public Ticket Ticket { get; set; }
         public List<Ticket> Tickets { get; set; }
+        public int CurrentTicketIndex { get; set; }
 
         public Form1()
         {
             InitializeComponent();
             Ticket = new Ticket();
             Tickets = new List<Ticket>();
+            CurrentTicketIndex = 1;
+            textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
         }
 
         private void menuItemButton01_Click(object sender, EventArgs e)
@@ -53,6 +56,7 @@ namespace WinFormsApp
             listBoxTicket.Items.Clear();
             Ticket = new Ticket();
             richTextBoxTicketAmount.Text = $"Items: {0}\nTotal: ${0}";
+            textBoxCurrentTicketIndex.Text = $"{++CurrentTicketIndex}";
         }
     }
 }
