@@ -31,14 +31,19 @@ namespace WinFormsApp
                 if (selectedIndex == listBoxTicket.Items.Count)
                 {
                     listBoxTicket.SelectedIndex = listBoxTicket.Items.Count - 1;
-                    
+
                 }
                 else
                 {
                     listBoxTicket.SelectedIndex = selectedIndex;
-                    
+
                 }
             }
+        }
+
+        private void buttonSaveTicket_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -73,6 +73,7 @@ namespace WinFormsApp
             buttonSaveTicket.TabIndex = 3;
             buttonSaveTicket.Text = "Save Ticket";
             buttonSaveTicket.UseVisualStyleBackColor = true;
+            buttonSaveTicket.Click += buttonSaveTicket_Click;
             // 
             // Form1
             // 
