@@ -34,6 +34,7 @@ namespace WinFormsApp
             listBoxTicket = new ListBox();
             buttonMenuItem001 = new Button();
             buttonRemoveItemFromTicket = new Button();
+            buttonSaveTicket = new Button();
             SuspendLayout();
             // 
             // listBoxTicket
@@ -56,7 +57,7 @@ namespace WinFormsApp
             // 
             // buttonRemoveItemFromTicket
             // 
-            buttonRemoveItemFromTicket.Location = new Point(135, 442);
+            buttonRemoveItemFromTicket.Location = new Point(12, 442);
             buttonRemoveItemFromTicket.Name = "buttonRemoveItemFromTicket";
             buttonRemoveItemFromTicket.Size = new Size(94, 29);
             buttonRemoveItemFromTicket.TabIndex = 2;
@@ -64,11 +65,21 @@ namespace WinFormsApp
             buttonRemoveItemFromTicket.UseVisualStyleBackColor = true;
             buttonRemoveItemFromTicket.Click += buttonRemoveItemFromTicket_Click;
             // 
+            // buttonSaveTicket
+            // 
+            buttonSaveTicket.Location = new Point(135, 442);
+            buttonSaveTicket.Name = "buttonSaveTicket";
+            buttonSaveTicket.Size = new Size(94, 29);
+            buttonSaveTicket.TabIndex = 3;
+            buttonSaveTicket.Text = "Save Ticket";
+            buttonSaveTicket.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 499);
+            Controls.Add(buttonSaveTicket);
             Controls.Add(buttonRemoveItemFromTicket);
             Controls.Add(buttonMenuItem001);
             Controls.Add(listBoxTicket);
@@ -82,5 +93,6 @@ namespace WinFormsApp
         private ListBox listBoxTicket;
         private Button buttonMenuItem001;
         private Button buttonRemoveItemFromTicket;
+        private Button buttonSaveTicket;
     }
 }
