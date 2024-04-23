@@ -6,17 +6,17 @@ using WinFormsApp.Models;
 
 namespace WinFormsApp
 {
-    public partial class FormConfigure : Form
+    public partial class FormConfigureMenu : Form
     {
         public List<Product> Products { get; set; }
 
-        public FormConfigure(List<Product> products)
+        public FormConfigureMenu(List<Product> products)
         {
             InitializeComponent();
 
             Products = products;
             ConfigureMenuEntriesFromProducts();
-            Text = "Configure";
+            Text = "Configure Menu";
         }
 
         private void ConfigureMenuEntriesFromProducts()

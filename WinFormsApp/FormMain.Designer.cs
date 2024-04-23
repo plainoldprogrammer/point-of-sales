@@ -42,7 +42,7 @@ namespace WinFormsApp
             buttonNextTicket = new Button();
             labelTicketStatus = new Label();
             buttonMenuItem002 = new Button();
-            buttonConfigure = new Button();
+            buttonConfigureMenu = new Button();
             SuspendLayout();
             // 
             // listBoxTicket
@@ -144,22 +144,22 @@ namespace WinFormsApp
             buttonMenuItem002.UseVisualStyleBackColor = true;
             buttonMenuItem002.Click += buttonMenuItem002_Click;
             // 
-            // buttonConfigure
+            // buttonConfigureMenu
             // 
-            buttonConfigure.Location = new Point(694, 532);
-            buttonConfigure.Name = "buttonConfigure";
-            buttonConfigure.Size = new Size(94, 29);
-            buttonConfigure.TabIndex = 11;
-            buttonConfigure.Text = "Configure";
-            buttonConfigure.UseVisualStyleBackColor = true;
-            buttonConfigure.Click += buttonConfigure_Click;
+            buttonConfigureMenu.Location = new Point(662, 532);
+            buttonConfigureMenu.Name = "buttonConfigureMenu";
+            buttonConfigureMenu.Size = new Size(126, 29);
+            buttonConfigureMenu.TabIndex = 11;
+            buttonConfigureMenu.Text = "Configure Menu";
+            buttonConfigureMenu.UseVisualStyleBackColor = true;
+            buttonConfigureMenu.Click += buttonConfigure_Click;
             // 
-            // Form1
+            // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 569);
-            Controls.Add(buttonConfigure);
+            Controls.Add(buttonConfigureMenu);
             Controls.Add(buttonMenuItem002);
             Controls.Add(labelTicketStatus);
             Controls.Add(buttonNextTicket);
@@ -171,7 +171,7 @@ namespace WinFormsApp
             Controls.Add(buttonRemoveItemFromTicket);
             Controls.Add(buttonMenuItem001);
             Controls.Add(listBoxTicket);
-            Name = "Form1";
+            Name = "FormMain";
             Text = "Point Of Sales";
             ResumeLayout(false);
             PerformLayout();
@@ -190,6 +190,6 @@ namespace WinFormsApp
         private Button buttonNextTicket;
         private Label labelTicketStatus;
         private Button buttonMenuItem002;
-        private Button buttonConfigure;
+        private Button buttonConfigureMenu;
     }
 }

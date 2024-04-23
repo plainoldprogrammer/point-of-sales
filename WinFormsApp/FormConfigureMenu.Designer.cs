@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp
 {
-    partial class FormConfigure
+    partial class FormConfigureMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -96,7 +96,7 @@
             Controls.Add(textBoxMenuItem001Price);
             Controls.Add(textBoxMenuItem001Name);
             Name = "FormConfigure";
-            Text = "Configure";
+            Text = "Configure Menu";
             ResumeLayout(false);
             PerformLayout();
         }

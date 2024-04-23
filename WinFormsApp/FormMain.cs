@@ -11,7 +11,7 @@ namespace WinFormsApp
         public Ticket TicketDraft { get; set; }
         public List<Ticket> Tickets { get; set; }
         public int CurrentTicketIndex { get; set; }
-        public FormConfigure FormConfigure { get; set; }
+        public FormConfigureMenu FormConfigure { get; set; }
         public List<Product> Products { get; set; }
 
         public FormMain()
@@ -21,7 +21,7 @@ namespace WinFormsApp
             ConfigureTicket();
             ConfigureProducts();
             UpdateMenuBasedOnNewProductsConfiguration();
-            FormConfigure = new FormConfigure(Products!);
+            FormConfigure = new FormConfigureMenu(Products!);
         }
 
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
