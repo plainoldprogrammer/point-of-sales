@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             listBox1 = new ListBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // listBox1
@@ -39,11 +40,21 @@
             listBox1.Size = new Size(217, 424);
             listBox1.TabIndex = 0;
             // 
+            // button1
+            // 
+            button1.Location = new Point(235, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 1;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(listBox1);
             Name = "Form1";
             Text = "Form1";
@@ -53,5 +64,6 @@
         #endregion
 
         private ListBox listBox1;
+        private Button button1;
     }
 }
