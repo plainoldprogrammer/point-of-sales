@@ -96,7 +96,7 @@
             Controls.Add(textBoxMenuItem001Price);
             Controls.Add(textBoxMenuItem001Name);
             Name = "FormConfigure";
-            Text = "FormConfigure";
+            Text = "Configure";
             ResumeLayout(false);
             PerformLayout();
         }
