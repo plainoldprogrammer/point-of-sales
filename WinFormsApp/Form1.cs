@@ -74,6 +74,7 @@ namespace WinFormsApp
                 listBoxTicket.Items.Add(product);
             }
 
+            textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
             richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${ticket.Total}";
         }
     }
