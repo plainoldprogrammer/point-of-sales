@@ -90,21 +90,21 @@ namespace WinFormsApp
             // 
             // textBoxCurrentTicketIndex
             // 
-            textBoxCurrentTicketIndex.Location = new Point(12, 477);
+            textBoxCurrentTicketIndex.Location = new Point(67, 477);
             textBoxCurrentTicketIndex.Name = "textBoxCurrentTicketIndex";
             textBoxCurrentTicketIndex.Size = new Size(49, 27);
             textBoxCurrentTicketIndex.TabIndex = 5;
             // 
             // textBoxTicketsCount
             // 
-            textBoxTicketsCount.Location = new Point(180, 477);
+            textBoxTicketsCount.Location = new Point(122, 477);
             textBoxTicketsCount.Name = "textBoxTicketsCount";
             textBoxTicketsCount.Size = new Size(49, 27);
             textBoxTicketsCount.TabIndex = 6;
             // 
             // buttonPreviousTicket
             // 
-            buttonPreviousTicket.Location = new Point(67, 477);
+            buttonPreviousTicket.Location = new Point(12, 477);
             buttonPreviousTicket.Name = "buttonPreviousTicket";
             buttonPreviousTicket.Size = new Size(49, 27);
             buttonPreviousTicket.TabIndex = 7;
@@ -114,7 +114,7 @@ namespace WinFormsApp
             // 
             // buttonNextTicket
             // 
-            buttonNextTicket.Location = new Point(122, 477);
+            buttonNextTicket.Location = new Point(180, 477);
             buttonNextTicket.Name = "buttonNextTicket";
             buttonNextTicket.Size = new Size(49, 27);
             buttonNextTicket.TabIndex = 8;
