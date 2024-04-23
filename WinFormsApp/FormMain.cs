@@ -161,13 +161,13 @@ namespace WinFormsApp
         {
             TicketDraft = new Ticket();
             Tickets = new List<Ticket>();
+
             CurrentTicketIndex = 1;
             textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
             textBoxTicketsCount.Text = $"{CurrentTicketIndex}";
 
             buttonPreviousTicket.Enabled = false;
             buttonNextTicket.Enabled = false;
-
             textBoxTicketsCount.Enabled = false;
             buttonRemoveItemFromTicket.Enabled = false;
 
