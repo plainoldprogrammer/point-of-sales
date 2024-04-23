@@ -28,7 +28,9 @@ namespace WinFormsApp
             buttonRemoveItemFromTicket.Enabled = false;
 
             labelTicketStatus.Text = "Ticket status: Draft";
+
             FormConfigure = new FormConfigure();
+            FormConfigure.Text = "Configure";
         }
 
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
