@@ -160,6 +160,7 @@ namespace WinFormsApp
 
         private void buttonConfigure_Click(object sender, EventArgs e)
         {
+            FormConfigure.ShowDialog();
         }
 
         private Ticket GetActiveTicket()
