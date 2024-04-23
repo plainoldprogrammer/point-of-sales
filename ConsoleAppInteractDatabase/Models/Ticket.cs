@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WinFormsApp.Models
+namespace ConsoleAppDatabaseAccess.Models
 {
     public class Ticket
     {
