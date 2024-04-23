@@ -6,14 +6,14 @@ namespace WinFormsApp
 {
     public partial class Form1 : Form
     {
-        public Ticket Ticket { get; set; }
+        public Ticket TicketDraft { get; set; }
         public List<Ticket> Tickets { get; set; }
         public int CurrentTicketIndex { get; set; }
 
         public Form1()
         {
             InitializeComponent();
-            Ticket = new Ticket();
+            TicketDraft = new Ticket();
             Tickets = new List<Ticket>();
             CurrentTicketIndex = 1;
             textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
@@ -23,9 +23,9 @@ namespace WinFormsApp
         private void menuItemButton01_Click(object sender, EventArgs e)
         {
             listBoxTicket.Items.Add("Quesadilla");
-            Ticket.Products.Add("Quesadilla");
+            TicketDraft.Products.Add("Quesadilla");
 
-            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${Ticket.Total}";
+            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
         }
 
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace WinFormsApp
                 int selectedIndex = listBoxTicket.SelectedIndex;
 
                 listBoxTicket.Items.RemoveAt(selectedIndex);
-                Ticket.Products.RemoveAt(selectedIndex);
+                TicketDraft.Products.RemoveAt(selectedIndex);
 
                 if (selectedIndex == listBoxTicket.Items.Count)
                 {
@@ -47,15 +47,15 @@ namespace WinFormsApp
                     listBoxTicket.SelectedIndex = selectedIndex;
                 }
 
-                richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${Ticket.Total}";
+                richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
             }
         }
 
         private void buttonSaveTicket_Click(object sender, EventArgs e)
         {
-            Tickets.Add(Ticket);
+            Tickets.Add(TicketDraft);
             listBoxTicket.Items.Clear();
-            Ticket = new Ticket();
+            TicketDraft = new Ticket();
 
             richTextBoxTicketAmount.Text = $"Items: {0}\nTotal: ${0}";
             CurrentTicketIndex++;
@@ -68,16 +68,16 @@ namespace WinFormsApp
             if (CurrentTicketIndex >= 2)
             {
                 CurrentTicketIndex--;
-                Ticket ticket = Tickets[CurrentTicketIndex - 1];
+                Ticket currentTicket = Tickets[CurrentTicketIndex - 1];
 
                 listBoxTicket.Items.Clear();
-                foreach (string product in ticket.Products)
+                foreach (string product in currentTicket.Products)
                 {
                     listBoxTicket.Items.Add(product);
                 }
 
                 textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
-                richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${ticket.Total}";
+                richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${currentTicket.Total}";
             }
         }
 
@@ -86,16 +86,16 @@ namespace WinFormsApp
             if (CurrentTicketIndex < Tickets.Count)
             {
                 CurrentTicketIndex++;
-                Ticket ticket = Tickets[CurrentTicketIndex - 1];
+                Ticket currentTicket = Tickets[CurrentTicketIndex - 1];
 
                 listBoxTicket.Items.Clear();
-                foreach (string product in ticket.Products)
+                foreach (string product in currentTicket.Products)
                 {
                     listBoxTicket.Items.Add(product);
                 }
 
                 textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
-                richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${ticket.Total}";
+                richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${currentTicket.Total}";
             }
             else if (CurrentTicketIndex == Tickets.Count)
             {
