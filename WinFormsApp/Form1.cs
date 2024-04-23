@@ -65,17 +65,20 @@ namespace WinFormsApp
 
         private void buttonPreviousTicket_Click(object sender, EventArgs e)
         {
-            CurrentTicketIndex--;
-            Ticket ticket = Tickets[CurrentTicketIndex - 1];
-
-            listBoxTicket.Items.Clear();
-            foreach (string product in ticket.Products)
+            if (CurrentTicketIndex >= 2)
             {
-                listBoxTicket.Items.Add(product);
-            }
+                CurrentTicketIndex--;
+                Ticket ticket = Tickets[CurrentTicketIndex - 1];
 
-            textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
-            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${ticket.Total}";
+                listBoxTicket.Items.Clear();
+                foreach (string product in ticket.Products)
+                {
+                    listBoxTicket.Items.Add(product);
+                }
+
+                textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
+                richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${ticket.Total}";
+            }
         }
     }
 }
