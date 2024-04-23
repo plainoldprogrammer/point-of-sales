@@ -33,6 +33,8 @@ namespace WinFormsApp
             TicketDraft.Products.Add("Quesadilla");
 
             richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
+
+            buttonRemoveItemFromTicket.Enabled = Enabled;
         }
 
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
@@ -55,6 +57,11 @@ namespace WinFormsApp
                 }
 
                 richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
+            }
+
+            if (listBoxTicket.Items.Count == 0)
+            {
+                buttonRemoveItemFromTicket.Enabled = false;
             }
         }
 
