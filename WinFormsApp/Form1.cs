@@ -1,16 +1,19 @@
 using System;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace WinFormsApp
 {
     public partial class Form1 : Form
     {
         public Ticket Ticket { get; set; }
+        public List<Ticket> Tickets { get; set; }
 
         public Form1()
         {
             InitializeComponent();
             Ticket = new Ticket();
+            Tickets = new List<Ticket>();
         }
 
         private void menuItemButton01_Click(object sender, EventArgs e)
@@ -36,14 +39,15 @@ namespace WinFormsApp
                 else
                 {
                     listBoxTicket.SelectedIndex = selectedIndex;
-
                 }
             }
         }
 
         private void buttonSaveTicket_Click(object sender, EventArgs e)
         {
-
+            Tickets.Add(Ticket);
+            listBoxTicket.Items.Clear();
+            Ticket = new Ticket();
         }
     }
 }
