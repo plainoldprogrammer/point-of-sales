@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace WinFormsApp
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
         public Ticket TicketDraft { get; set; }
         public List<Ticket> Tickets { get; set; }
@@ -13,7 +13,7 @@ namespace WinFormsApp
         public FormConfigure FormConfigure { get; set; }
         public List<Product> Products { get; set; }
 
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
             TicketDraft = new Ticket();
