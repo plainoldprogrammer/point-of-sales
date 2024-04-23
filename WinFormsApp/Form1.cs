@@ -25,6 +25,8 @@ namespace WinFormsApp
 
             textBoxTicketsCount.Enabled = false;
             buttonRemoveItemFromTicket.Enabled = false;
+
+            labelTicketStatus.Text = "Ticket status: Draft";
         }
 
         private void buttonMenuItem001_Click(object sender, EventArgs e)
@@ -106,6 +108,8 @@ namespace WinFormsApp
                 textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
                 richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${currentTicket.Total}";
 
+                labelTicketStatus.Text = "Ticket status: Saved";
+
                 if (CurrentTicketIndex == 1)
                 {
                     buttonPreviousTicket.Enabled = false;
@@ -134,6 +138,8 @@ namespace WinFormsApp
                 textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
                 richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${currentTicket.Total}";
 
+                labelTicketStatus.Text = "Ticket status: Saved";
+
                 if (CurrentTicketIndex == 2)
                 {
                     buttonPreviousTicket.Enabled = true;
@@ -152,6 +158,8 @@ namespace WinFormsApp
 
                 textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
                 richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${currentTicket.Total}";
+
+                labelTicketStatus.Text = "Ticket status: Draft";
 
                 buttonNextTicket.Enabled = false;
             }

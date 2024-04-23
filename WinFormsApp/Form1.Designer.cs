@@ -126,7 +126,7 @@ namespace WinFormsApp
             // labelTicketStatus
             // 
             labelTicketStatus.AutoSize = true;
-            labelTicketStatus.Location = new Point(12, 445);
+            labelTicketStatus.Location = new Point(12, 439);
             labelTicketStatus.Name = "labelTicketStatus";
             labelTicketStatus.Size = new Size(93, 20);
             labelTicketStatus.TabIndex = 9;
