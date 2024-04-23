@@ -44,7 +44,18 @@ namespace WinFormsApp
                 int selectedIndex = listBoxTicket.SelectedIndex;
 
                 listBoxTicket.Items.RemoveAt(selectedIndex);
-                TicketDraft.Products.RemoveAt(selectedIndex);
+                Ticket currentTicket;
+
+                if (CurrentTicketIndex == (Tickets.Count + 1))  
+                {
+                    currentTicket = TicketDraft;
+                }
+                else
+                {
+                    currentTicket = Tickets[CurrentTicketIndex - 1];
+                }
+
+                currentTicket.Products.RemoveAt(selectedIndex);
 
                 if (selectedIndex == listBoxTicket.Items.Count)
                 {
