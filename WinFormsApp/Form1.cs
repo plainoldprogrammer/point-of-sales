@@ -17,6 +17,7 @@ namespace WinFormsApp
             Tickets = new List<Ticket>();
             CurrentTicketIndex = 1;
             textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
+            textBoxTicketsCount.Text = $"{CurrentTicketIndex}";
         }
 
         private void menuItemButton01_Click(object sender, EventArgs e)
@@ -57,6 +58,7 @@ namespace WinFormsApp
             Ticket = new Ticket();
             richTextBoxTicketAmount.Text = $"Items: {0}\nTotal: ${0}";
             textBoxCurrentTicketIndex.Text = $"{++CurrentTicketIndex}";
+            textBoxTicketsCount.Text = $"{Tickets.Count + 1}";
         }
     }
 }
