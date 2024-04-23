@@ -32,7 +32,17 @@ namespace WinFormsApp
         private void buttonMenuItem001_Click(object sender, EventArgs e)
         {
             listBoxTicket.Items.Add("Quesadilla");
-            TicketDraft.Products.Add("Quesadilla");
+
+            Ticket currentTicket;
+            if (CurrentTicketIndex == (Tickets.Count + 1))
+            {
+                currentTicket = TicketDraft;
+            }
+            else
+            {
+                currentTicket = Tickets[CurrentTicketIndex - 1];
+            }
+            currentTicket.Products.Add("Quesadilla");
 
             richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
 
@@ -46,8 +56,8 @@ namespace WinFormsApp
                 int selectedIndex = listBoxTicket.SelectedIndex;
 
                 listBoxTicket.Items.RemoveAt(selectedIndex);
-                Ticket currentTicket;
 
+                Ticket currentTicket;
                 if (CurrentTicketIndex == (Tickets.Count + 1))  
                 {
                     currentTicket = TicketDraft;
