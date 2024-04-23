@@ -29,26 +29,6 @@ namespace WinFormsApp
             labelTicketStatus.Text = "Ticket status: Draft";
         }
 
-        private void buttonMenuItem001_Click(object sender, EventArgs e)
-        {
-            listBoxTicket.Items.Add("Quesadilla");
-
-            Ticket currentTicket;
-            if (CurrentTicketIndex == (Tickets.Count + 1))
-            {
-                currentTicket = TicketDraft;
-            }
-            else
-            {
-                currentTicket = Tickets[CurrentTicketIndex - 1];
-            }
-            currentTicket.Products.Add("Quesadilla");
-
-            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
-
-            buttonRemoveItemFromTicket.Enabled = Enabled;
-        }
-
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
         {
             if ((listBoxTicket.Items.Count > 0) && (listBoxTicket.SelectedIndex >= 0))
@@ -174,6 +154,26 @@ namespace WinFormsApp
                 buttonPreviousTicket.Enabled = true;
                 buttonNextTicket.Enabled = false;
             }
+        }
+
+        private void buttonMenuItem001_Click(object sender, EventArgs e)
+        {
+            listBoxTicket.Items.Add("Quesadilla");
+
+            Ticket currentTicket;
+            if (CurrentTicketIndex == (Tickets.Count + 1))
+            {
+                currentTicket = TicketDraft;
+            }
+            else
+            {
+                currentTicket = Tickets[CurrentTicketIndex - 1];
+            }
+            currentTicket.Products.Add("Quesadilla");
+
+            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
+
+            buttonRemoveItemFromTicket.Enabled = Enabled;
         }
 
         private void buttonMenuItem002_Click(object sender, EventArgs e)
