@@ -38,6 +38,7 @@ namespace WinFormsApp
             richTextBoxTicketAmount = new RichTextBox();
             textBoxCurrentTicketIndex = new TextBox();
             textBoxTicketsCount = new TextBox();
+            buttonPreviousTicket = new Button();
             SuspendLayout();
             // 
             // listBoxTicket
@@ -100,11 +101,21 @@ namespace WinFormsApp
             textBoxTicketsCount.Size = new Size(49, 27);
             textBoxTicketsCount.TabIndex = 6;
             // 
+            // buttonPreviousTicket
+            // 
+            buttonPreviousTicket.Location = new Point(135, 475);
+            buttonPreviousTicket.Name = "buttonPreviousTicket";
+            buttonPreviousTicket.Size = new Size(49, 29);
+            buttonPreviousTicket.TabIndex = 7;
+            buttonPreviousTicket.Text = "<";
+            buttonPreviousTicket.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 524);
+            Controls.Add(buttonPreviousTicket);
             Controls.Add(textBoxTicketsCount);
             Controls.Add(textBoxCurrentTicketIndex);
             Controls.Add(richTextBoxTicketAmount);
@@ -127,5 +138,6 @@ namespace WinFormsApp
         private RichTextBox richTextBoxTicketAmount;
         private TextBox textBoxCurrentTicketIndex;
         private TextBox textBoxTicketsCount;
+        private Button buttonPreviousTicket;
     }
 }
