@@ -185,7 +185,11 @@ namespace WinFormsApp
         private void buttonConfigure_Click(object sender, EventArgs e)
         {
             FormConfigure.ShowDialog();
-            
+            UpdateMenuBasedOnNewConfiguration();
+        }
+
+        private void UpdateMenuBasedOnNewConfiguration()
+        {
             buttonMenuItem001.Text = Products.ElementAt(0).Name;
             buttonMenuItem002.Text = Products.ElementAt(1).Name;
         }
