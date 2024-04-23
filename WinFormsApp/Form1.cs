@@ -156,16 +156,6 @@ namespace WinFormsApp
             }
         }
 
-        private void buttonMenuItem001_Click(object sender, EventArgs e)
-        {
-            AddProductToTheTicket("Quesadilla", 30);
-        }
-
-        private void buttonMenuItem002_Click(object sender, EventArgs e)
-        {
-            AddProductToTheTicket("Milanesa", 60);
-        }
-
         private Ticket GetActiveTicket()
         {
             Ticket currentTicket;
@@ -194,6 +184,16 @@ namespace WinFormsApp
             richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
 
             buttonRemoveItemFromTicket.Enabled = Enabled;
+        }
+
+        private void buttonMenuItem001_Click(object sender, EventArgs e)
+        {
+            AddProductToTheTicket("Quesadilla", 30);
+        }
+
+        private void buttonMenuItem002_Click(object sender, EventArgs e)
+        {
+            AddProductToTheTicket("Milanesa", 60);
         }
     }
 }
