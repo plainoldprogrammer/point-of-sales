@@ -156,6 +156,11 @@ namespace WinFormsApp
             }
         }
 
+        private void buttonConfigure_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private Ticket GetActiveTicket()
         {
             Ticket currentTicket;
@@ -194,11 +199,6 @@ namespace WinFormsApp
         private void buttonMenuItem002_Click(object sender, EventArgs e)
         {
             AddProductToTheTicket("Milanesa", 60);
-        }
-
-        private void buttonConfigure_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
