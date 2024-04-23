@@ -163,15 +163,7 @@ namespace WinFormsApp
             product.Price = 30;
             listBoxTicket.Items.Add(product.Name);
 
-            Ticket currentTicket;
-            if (CurrentTicketIndex == (Tickets.Count + 1))
-            {
-                currentTicket = TicketDraft;
-            }
-            else
-            {
-                currentTicket = Tickets[CurrentTicketIndex - 1];
-            }
+            Ticket currentTicket = GetActiveTicket();
             currentTicket.Products.Add(product);
 
             richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
@@ -186,6 +178,16 @@ namespace WinFormsApp
             product.Price = 60;
             listBoxTicket.Items.Add(product.Name);
 
+            Ticket currentTicket = GetActiveTicket();
+            currentTicket.Products.Add(product);
+
+            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
+
+            buttonRemoveItemFromTicket.Enabled = Enabled;
+        }
+
+        private Ticket GetActiveTicket()
+        {
             Ticket currentTicket;
             if (CurrentTicketIndex == (Tickets.Count + 1))
             {
@@ -195,11 +197,8 @@ namespace WinFormsApp
             {
                 currentTicket = Tickets[CurrentTicketIndex - 1];
             }
-            currentTicket.Products.Add(product);
 
-            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
-
-            buttonRemoveItemFromTicket.Enabled = Enabled;
+            return currentTicket;
         }
     }
 }
