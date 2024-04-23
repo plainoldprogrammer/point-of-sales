@@ -96,16 +96,16 @@ namespace WinFormsApp
             // 
             // textBoxTicketsCount
             // 
-            textBoxTicketsCount.Location = new Point(67, 477);
+            textBoxTicketsCount.Location = new Point(180, 477);
             textBoxTicketsCount.Name = "textBoxTicketsCount";
             textBoxTicketsCount.Size = new Size(49, 27);
             textBoxTicketsCount.TabIndex = 6;
             // 
             // buttonPreviousTicket
             // 
-            buttonPreviousTicket.Location = new Point(135, 475);
+            buttonPreviousTicket.Location = new Point(67, 477);
             buttonPreviousTicket.Name = "buttonPreviousTicket";
-            buttonPreviousTicket.Size = new Size(49, 29);
+            buttonPreviousTicket.Size = new Size(49, 27);
             buttonPreviousTicket.TabIndex = 7;
             buttonPreviousTicket.Text = "<";
             buttonPreviousTicket.UseVisualStyleBackColor = true;
