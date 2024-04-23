@@ -161,7 +161,7 @@ namespace WinFormsApp
             Product product = new Product();
             product.Name = "Quesadilla";
             product.Price = 30;
-            listBoxTicket.Items.Add(product.Name);
+            listBoxTicket.Items.Add(product);
 
             Ticket currentTicket = GetActiveTicket();
             currentTicket.Products.Add(product);
@@ -176,7 +176,7 @@ namespace WinFormsApp
             Product product = new Product();
             product.Name = "Milanesa";
             product.Price = 60;
-            listBoxTicket.Items.Add(product.Name);
+            listBoxTicket.Items.Add(product);
 
             Ticket currentTicket = GetActiveTicket();
             currentTicket.Products.Add(product);
