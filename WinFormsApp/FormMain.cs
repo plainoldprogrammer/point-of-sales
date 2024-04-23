@@ -17,20 +17,8 @@ namespace WinFormsApp
         public FormMain()
         {
             InitializeComponent();
-            TicketDraft = new Ticket();
-            Tickets = new List<Ticket>();
-            CurrentTicketIndex = 1;
-            textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
-            textBoxTicketsCount.Text = $"{CurrentTicketIndex}";
 
-            buttonPreviousTicket.Enabled = false;
-            buttonNextTicket.Enabled = false;
-
-            textBoxTicketsCount.Enabled = false;
-            buttonRemoveItemFromTicket.Enabled = false;
-
-            labelTicketStatus.Text = "Ticket status: Draft";
-
+            ConfigureTicket();
             ConfigureProducts();
         }
 
@@ -165,6 +153,23 @@ namespace WinFormsApp
         {
             FormConfigure.ShowDialog();
             UpdateMenuBasedOnNewConfiguration();
+        }
+
+        private void ConfigureTicket()
+        {
+            TicketDraft = new Ticket();
+            Tickets = new List<Ticket>();
+            CurrentTicketIndex = 1;
+            textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
+            textBoxTicketsCount.Text = $"{CurrentTicketIndex}";
+
+            buttonPreviousTicket.Enabled = false;
+            buttonNextTicket.Enabled = false;
+
+            textBoxTicketsCount.Enabled = false;
+            buttonRemoveItemFromTicket.Enabled = false;
+
+            labelTicketStatus.Text = "Ticket status: Draft";
         }
 
         private void ConfigureProducts()
