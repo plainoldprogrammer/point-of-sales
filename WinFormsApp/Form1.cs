@@ -26,14 +26,17 @@ namespace WinFormsApp
                 int selectedIndex = listBoxTicket.SelectedIndex;
 
                 listBoxTicket.Items.RemoveAt(selectedIndex);
+                Ticket.Products.RemoveAt(selectedIndex);
 
                 if (selectedIndex == listBoxTicket.Items.Count)
                 {
                     listBoxTicket.SelectedIndex = listBoxTicket.Items.Count - 1;
+                    
                 }
                 else
                 {
                     listBoxTicket.SelectedIndex = selectedIndex;
+                    
                 }
             }
         }
