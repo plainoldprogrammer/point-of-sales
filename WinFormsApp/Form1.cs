@@ -9,7 +9,7 @@ namespace WinFormsApp
 
         private void menuItemButton01_Click(object sender, EventArgs e)
         {
-            ticketListBox.Items.Add("Quesadilla");
+            listBoxTicket.Items.Add("Quesadilla");
         }
     }
 }

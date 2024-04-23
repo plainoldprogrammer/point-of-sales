@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ticketListBox = new ListBox();
+            listBoxTicket = new ListBox();
             menuItemButton01 = new Button();
             removeItemFromTicketButtom = new Button();
             SuspendLayout();
             // 
-            // ticketListBox
+            // listBoxTicket
             // 
-            ticketListBox.FormattingEnabled = true;
-            ticketListBox.Location = new Point(12, 12);
-            ticketListBox.Name = "ticketListBox";
-            ticketListBox.Size = new Size(217, 424);
-            ticketListBox.TabIndex = 0;
+            listBoxTicket.FormattingEnabled = true;
+            listBoxTicket.Location = new Point(12, 12);
+            listBoxTicket.Name = "listBoxTicket";
+            listBoxTicket.Size = new Size(217, 424);
+            listBoxTicket.TabIndex = 0;
             // 
             // menuItemButton01
             // 
@@ -67,7 +67,7 @@
             ClientSize = new Size(800, 499);
             Controls.Add(removeItemFromTicketButtom);
             Controls.Add(menuItemButton01);
-            Controls.Add(ticketListBox);
+            Controls.Add(listBoxTicket);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -75,7 +75,7 @@
 
         #endregion
 
-        private ListBox ticketListBox;
+        private ListBox listBoxTicket;
         private Button menuItemButton01;
         private Button removeItemFromTicketButtom;
     }
