@@ -40,6 +40,7 @@ namespace WinFormsApp
             textBoxTicketsCount = new TextBox();
             buttonPreviousTicket = new Button();
             buttonNextTicket = new Button();
+            labelTicketStatus = new Label();
             SuspendLayout();
             // 
             // listBoxTicket
@@ -62,7 +63,7 @@ namespace WinFormsApp
             // 
             // buttonRemoveItemFromTicket
             // 
-            buttonRemoveItemFromTicket.Location = new Point(12, 442);
+            buttonRemoveItemFromTicket.Location = new Point(12, 497);
             buttonRemoveItemFromTicket.Name = "buttonRemoveItemFromTicket";
             buttonRemoveItemFromTicket.Size = new Size(117, 29);
             buttonRemoveItemFromTicket.TabIndex = 2;
@@ -72,7 +73,7 @@ namespace WinFormsApp
             // 
             // buttonSaveTicket
             // 
-            buttonSaveTicket.Location = new Point(135, 442);
+            buttonSaveTicket.Location = new Point(135, 497);
             buttonSaveTicket.Name = "buttonSaveTicket";
             buttonSaveTicket.Size = new Size(94, 29);
             buttonSaveTicket.TabIndex = 3;
@@ -90,21 +91,21 @@ namespace WinFormsApp
             // 
             // textBoxCurrentTicketIndex
             // 
-            textBoxCurrentTicketIndex.Location = new Point(67, 477);
+            textBoxCurrentTicketIndex.Location = new Point(67, 532);
             textBoxCurrentTicketIndex.Name = "textBoxCurrentTicketIndex";
             textBoxCurrentTicketIndex.Size = new Size(49, 27);
             textBoxCurrentTicketIndex.TabIndex = 5;
             // 
             // textBoxTicketsCount
             // 
-            textBoxTicketsCount.Location = new Point(122, 477);
+            textBoxTicketsCount.Location = new Point(122, 532);
             textBoxTicketsCount.Name = "textBoxTicketsCount";
             textBoxTicketsCount.Size = new Size(49, 27);
             textBoxTicketsCount.TabIndex = 6;
             // 
             // buttonPreviousTicket
             // 
-            buttonPreviousTicket.Location = new Point(12, 477);
+            buttonPreviousTicket.Location = new Point(12, 532);
             buttonPreviousTicket.Name = "buttonPreviousTicket";
             buttonPreviousTicket.Size = new Size(49, 27);
             buttonPreviousTicket.TabIndex = 7;
@@ -114,7 +115,7 @@ namespace WinFormsApp
             // 
             // buttonNextTicket
             // 
-            buttonNextTicket.Location = new Point(180, 477);
+            buttonNextTicket.Location = new Point(180, 532);
             buttonNextTicket.Name = "buttonNextTicket";
             buttonNextTicket.Size = new Size(49, 27);
             buttonNextTicket.TabIndex = 8;
@@ -122,11 +123,21 @@ namespace WinFormsApp
             buttonNextTicket.UseVisualStyleBackColor = true;
             buttonNextTicket.Click += buttonNextTicket_Click;
             // 
+            // labelTicketStatus
+            // 
+            labelTicketStatus.AutoSize = true;
+            labelTicketStatus.Location = new Point(12, 445);
+            labelTicketStatus.Name = "labelTicketStatus";
+            labelTicketStatus.Size = new Size(93, 20);
+            labelTicketStatus.TabIndex = 9;
+            labelTicketStatus.Text = "Ticket status:";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 524);
+            ClientSize = new Size(800, 569);
+            Controls.Add(labelTicketStatus);
             Controls.Add(buttonNextTicket);
             Controls.Add(buttonPreviousTicket);
             Controls.Add(textBoxTicketsCount);
@@ -153,5 +164,6 @@ namespace WinFormsApp
         private TextBox textBoxTicketsCount;
         private Button buttonPreviousTicket;
         private Button buttonNextTicket;
+        private Label labelTicketStatus;
     }
 }
