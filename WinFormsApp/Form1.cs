@@ -14,7 +14,21 @@ namespace WinFormsApp
 
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
         {
+            if (listBoxTicket.Items.Count > 0)
+            {
+                int selectedIndex = listBoxTicket.SelectedIndex;
 
+                listBoxTicket.Items.RemoveAt(selectedIndex);
+
+                if (selectedIndex == listBoxTicket.Items.Count)
+                {
+                    listBoxTicket.SelectedIndex = listBoxTicket.Items.Count - 1;
+                }
+                else
+                {
+                    listBoxTicket.SelectedIndex = selectedIndex;
+                }
+            }
         }
     }
 }
