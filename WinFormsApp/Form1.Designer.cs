@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBox1 = new ListBox();
+            ticketListBox = new ListBox();
             menuItemButton01 = new Button();
             SuspendLayout();
             // 
-            // listBox1
+            // ticketListBox
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(12, 12);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(217, 424);
-            listBox1.TabIndex = 0;
+            ticketListBox.FormattingEnabled = true;
+            ticketListBox.Location = new Point(12, 12);
+            ticketListBox.Name = "ticketListBox";
+            ticketListBox.Size = new Size(217, 424);
+            ticketListBox.TabIndex = 0;
             // 
             // menuItemButton01
             // 
@@ -56,7 +56,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(menuItemButton01);
-            Controls.Add(listBox1);
+            Controls.Add(ticketListBox);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -64,7 +64,7 @@
 
         #endregion
 
-        private ListBox listBox1;
+        private ListBox ticketListBox;
         private Button menuItemButton01;
     }
 }
