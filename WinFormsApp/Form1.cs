@@ -21,7 +21,7 @@ namespace WinFormsApp
             listBoxTicket.Items.Add("Quesadilla");
             Ticket.Products.Add("Quesadilla");
 
-            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}";
+            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${Ticket.Total}";
         }
 
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
