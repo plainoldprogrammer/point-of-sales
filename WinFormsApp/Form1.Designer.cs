@@ -30,6 +30,7 @@
         {
             ticketListBox = new ListBox();
             menuItemButton01 = new Button();
+            removeItemFromTicketButtom = new Button();
             SuspendLayout();
             // 
             // ticketListBox
@@ -50,11 +51,21 @@
             menuItemButton01.UseVisualStyleBackColor = true;
             menuItemButton01.Click += menuItemButton01_Click;
             // 
+            // removeItemFromTicketButtom
+            // 
+            removeItemFromTicketButtom.Location = new Point(135, 442);
+            removeItemFromTicketButtom.Name = "removeItemFromTicketButtom";
+            removeItemFromTicketButtom.Size = new Size(94, 29);
+            removeItemFromTicketButtom.TabIndex = 2;
+            removeItemFromTicketButtom.Text = "Remove";
+            removeItemFromTicketButtom.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 499);
+            Controls.Add(removeItemFromTicketButtom);
             Controls.Add(menuItemButton01);
             Controls.Add(ticketListBox);
             Name = "Form1";
@@ -66,5 +77,6 @@
 
         private ListBox ticketListBox;
         private Button menuItemButton01;
+        private Button removeItemFromTicketButtom;
     }
 }
