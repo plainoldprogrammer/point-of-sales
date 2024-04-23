@@ -18,6 +18,7 @@ namespace WinFormsApp
             CurrentTicketIndex = 1;
             textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
             textBoxTicketsCount.Text = $"{CurrentTicketIndex}";
+            buttonPreviousTicket.Enabled = false;
         }
 
         private void menuItemButton01_Click(object sender, EventArgs e)
@@ -61,6 +62,8 @@ namespace WinFormsApp
             CurrentTicketIndex++;
             textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
             textBoxTicketsCount.Text = $"{Tickets.Count + 1}";
+
+            buttonPreviousTicket.Enabled = true;
         }
 
         private void buttonPreviousTicket_Click(object sender, EventArgs e)
@@ -78,6 +81,11 @@ namespace WinFormsApp
 
                 textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
                 richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${currentTicket.Total}";
+
+                if (CurrentTicketIndex == 1)
+                {
+                    buttonPreviousTicket.Enabled = false;
+                }
             }
         }
 
@@ -96,6 +104,11 @@ namespace WinFormsApp
 
                 textBoxCurrentTicketIndex.Text = $"{CurrentTicketIndex}";
                 richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${currentTicket.Total}";
+
+                if (CurrentTicketIndex == 2)
+                {
+                    buttonPreviousTicket.Enabled = true;
+                }
             }
             else if (CurrentTicketIndex == Tickets.Count)
             {
