@@ -30,7 +30,7 @@ namespace WinFormsApp
 
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
         {
-            if (listBoxTicket.Items.Count > 0)
+            if ((listBoxTicket.Items.Count > 0) && (listBoxTicket.SelectedIndex >= 0))
             {
                 int selectedIndex = listBoxTicket.SelectedIndex;
 
