@@ -10,7 +10,14 @@ namespace WinFormsApp
         {
             get
             {
-                return Products.Count * 30;
+                int total = 0;
+
+                foreach (Product product in Products)
+                {
+                    total += product.Price;
+                }
+
+                return total;
             }
 
             set
