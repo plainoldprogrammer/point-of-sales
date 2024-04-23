@@ -15,11 +15,11 @@ namespace WinFormsApp
             InitializeComponent();
 
             Products = products;
-            ConfigureMenuEntries();
+            ConfigureMenuEntriesFromProducts();
             Text = "Configure";
         }
 
-        private void ConfigureMenuEntries()
+        private void ConfigureMenuEntriesFromProducts()
         {
             textBoxMenuItem001Name.Text = Products.ElementAt(0).Name;
             textBoxMenuItem001Price.Text = $"{Products.ElementAt(0).Price}";
