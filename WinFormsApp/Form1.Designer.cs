@@ -59,6 +59,7 @@
             buttonRemoveItemFromTicket.TabIndex = 2;
             buttonRemoveItemFromTicket.Text = "Remove";
             buttonRemoveItemFromTicket.UseVisualStyleBackColor = true;
+            buttonRemoveItemFromTicket.Click += buttonRemoveItemFromTicket_Click;
             // 
             // Form1
             // 

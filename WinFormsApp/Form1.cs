@@ -11,5 +11,10 @@ namespace WinFormsApp
         {
             listBoxTicket.Items.Add("Quesadilla");
         }
+
+        private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
