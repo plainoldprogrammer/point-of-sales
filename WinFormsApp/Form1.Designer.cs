@@ -95,7 +95,7 @@ namespace WinFormsApp
             Controls.Add(buttonMenuItem001);
             Controls.Add(listBoxTicket);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Point Of Sales";
             ResumeLayout(false);
         }
 
