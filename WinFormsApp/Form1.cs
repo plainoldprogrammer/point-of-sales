@@ -43,7 +43,7 @@ namespace WinFormsApp
                     listBoxTicket.SelectedIndex = selectedIndex;
                 }
 
-                richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}";
+                richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${Ticket.Total}";
             }
         }
 
