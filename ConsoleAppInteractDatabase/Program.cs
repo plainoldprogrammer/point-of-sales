@@ -8,7 +8,7 @@ namespace ConsoleAppDatabaseAccess
         public static void Main(String[] args)
         {
             DbManager dbManager = new DbManager();
-            dbManager.CreateProduct("name", 75);
+            dbManager.CreateProduct("caldo", 75);
             dbManager.CloseDb();
         }
     }
