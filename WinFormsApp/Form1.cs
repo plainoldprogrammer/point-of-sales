@@ -60,5 +60,10 @@ namespace WinFormsApp
             textBoxCurrentTicketIndex.Text = $"{++CurrentTicketIndex}";
             textBoxTicketsCount.Text = $"{Tickets.Count + 1}";
         }
+
+        private void buttonPreviousTicket_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

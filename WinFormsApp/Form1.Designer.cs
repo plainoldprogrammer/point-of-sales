@@ -109,6 +109,7 @@ namespace WinFormsApp
             buttonPreviousTicket.TabIndex = 7;
             buttonPreviousTicket.Text = "<";
             buttonPreviousTicket.UseVisualStyleBackColor = true;
+            buttonPreviousTicket.Click += buttonPreviousTicket_Click;
             // 
             // Form1
             // 
