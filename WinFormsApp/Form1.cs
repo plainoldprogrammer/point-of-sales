@@ -52,6 +52,7 @@ namespace WinFormsApp
             Tickets.Add(Ticket);
             listBoxTicket.Items.Clear();
             Ticket = new Ticket();
+            richTextBoxTicketAmount.Text = "Items: 0";
         }
     }
 }
