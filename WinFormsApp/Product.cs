@@ -6,5 +6,10 @@ namespace WinFormsApp
     {
         public String Name { get; set; }
         public int Price { get; set; }
+
+        public override String ToString()
+        {
+            return Name;
+        }
     }
 }
