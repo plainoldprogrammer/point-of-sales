@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
 using ConsoleAppDatabaseAccess.Models;
 using ConsoleAppDatabaseAccess.Context;
 
@@ -27,7 +28,15 @@ namespace ConsoleAppDatabaseAccess.Persistence
             };
 
             context.Products.Add(product);
-            context.SaveChanges();
+
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (DbUpdateException e)
+            {
+                Console.WriteLine("Product can't be saved on db. Possibly already exists");
+            }
         }
     }
 }

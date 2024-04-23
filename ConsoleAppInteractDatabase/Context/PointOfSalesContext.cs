@@ -24,5 +24,12 @@ namespace ConsoleAppDatabaseAccess.Context
                 optionsBuilder.UseSqlite($"Data Source={databasePath}\\{databaseName};");
             }
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>()
+                .HasIndex(p => new { p.Name })
+                .IsUnique();
+        }
     }
 }
