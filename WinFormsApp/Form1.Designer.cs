@@ -120,6 +120,7 @@ namespace WinFormsApp
             buttonNextTicket.TabIndex = 8;
             buttonNextTicket.Text = ">";
             buttonNextTicket.UseVisualStyleBackColor = true;
+            buttonNextTicket.Click += buttonNextTicket_Click;
             // 
             // Form1
             // 

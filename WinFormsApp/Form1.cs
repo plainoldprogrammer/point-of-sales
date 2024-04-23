@@ -80,5 +80,10 @@ namespace WinFormsApp
                 richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${ticket.Total}";
             }
         }
+
+        private void buttonNextTicket_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
