@@ -141,6 +141,7 @@ namespace WinFormsApp
             buttonMenuItem002.TabIndex = 10;
             buttonMenuItem002.Text = "Milanesa";
             buttonMenuItem002.UseVisualStyleBackColor = true;
+            buttonMenuItem002.Click += buttonMenuItem002_Click;
             // 
             // Form1
             // 

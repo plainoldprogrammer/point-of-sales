@@ -58,7 +58,7 @@ namespace WinFormsApp
                 listBoxTicket.Items.RemoveAt(selectedIndex);
 
                 Ticket currentTicket;
-                if (CurrentTicketIndex == (Tickets.Count + 1))  
+                if (CurrentTicketIndex == (Tickets.Count + 1))
                 {
                     currentTicket = TicketDraft;
                 }
@@ -174,6 +174,11 @@ namespace WinFormsApp
                 buttonPreviousTicket.Enabled = true;
                 buttonNextTicket.Enabled = false;
             }
+        }
+
+        private void buttonMenuItem002_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
