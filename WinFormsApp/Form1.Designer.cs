@@ -35,6 +35,7 @@ namespace WinFormsApp
             buttonMenuItem001 = new Button();
             buttonRemoveItemFromTicket = new Button();
             buttonSaveTicket = new Button();
+            richTextBoxTicketAmount = new RichTextBox();
             SuspendLayout();
             // 
             // listBoxTicket
@@ -42,7 +43,7 @@ namespace WinFormsApp
             listBoxTicket.FormattingEnabled = true;
             listBoxTicket.Location = new Point(12, 12);
             listBoxTicket.Name = "listBoxTicket";
-            listBoxTicket.Size = new Size(217, 424);
+            listBoxTicket.Size = new Size(217, 344);
             listBoxTicket.TabIndex = 0;
             // 
             // buttonMenuItem001
@@ -75,11 +76,20 @@ namespace WinFormsApp
             buttonSaveTicket.UseVisualStyleBackColor = true;
             buttonSaveTicket.Click += buttonSaveTicket_Click;
             // 
+            // richTextBoxTicketAmount
+            // 
+            richTextBoxTicketAmount.Location = new Point(12, 362);
+            richTextBoxTicketAmount.Name = "richTextBoxTicketAmount";
+            richTextBoxTicketAmount.Size = new Size(217, 74);
+            richTextBoxTicketAmount.TabIndex = 4;
+            richTextBoxTicketAmount.Text = "";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 499);
+            Controls.Add(richTextBoxTicketAmount);
             Controls.Add(buttonSaveTicket);
             Controls.Add(buttonRemoveItemFromTicket);
             Controls.Add(buttonMenuItem001);
@@ -95,5 +105,6 @@ namespace WinFormsApp
         private Button buttonMenuItem001;
         private Button buttonRemoveItemFromTicket;
         private Button buttonSaveTicket;
+        private RichTextBox richTextBoxTicketAmount;
     }
 }
