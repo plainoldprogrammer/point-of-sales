@@ -152,7 +152,7 @@ namespace WinFormsApp
         private void buttonConfigure_Click(object sender, EventArgs e)
         {
             FormConfigure.ShowDialog();
-            UpdateMenuBasedOnNewConfiguration();
+            UpdateMenuBasedOnNewProductsConfiguration();
         }
 
         private void ConfigureTicket()
@@ -193,7 +193,7 @@ namespace WinFormsApp
             FormConfigure = new FormConfigure(Products);
         }
 
-        private void UpdateMenuBasedOnNewConfiguration()
+        private void UpdateMenuBasedOnNewProductsConfiguration()
         {
             buttonMenuItem001.Text = Products.ElementAt(0).Name;
             buttonMenuItem002.Text = Products.ElementAt(1).Name;
