@@ -20,6 +20,8 @@ namespace WinFormsApp
 
             ConfigureTicket();
             ConfigureProducts();
+            UpdateMenuBasedOnNewProductsConfiguration();
+            FormConfigure = new FormConfigure(Products!);
         }
 
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
@@ -186,10 +188,6 @@ namespace WinFormsApp
 
             Products.Add(product001);
             Products.Add(product002);
-
-            UpdateMenuBasedOnNewProductsConfiguration();
-
-            FormConfigure = new FormConfigure(Products);
         }
 
         private void UpdateMenuBasedOnNewProductsConfiguration()
