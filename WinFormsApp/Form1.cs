@@ -5,14 +5,18 @@ namespace WinFormsApp
 {
     public partial class Form1 : Form
     {
+        public Ticket Ticket { get; set; }
+
         public Form1()
         {
             InitializeComponent();
+            Ticket = new Ticket();
         }
 
         private void menuItemButton01_Click(object sender, EventArgs e)
         {
             listBoxTicket.Items.Add("Quesadilla");
+            Ticket.Products.Add("Quesadilla");
         }
 
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
