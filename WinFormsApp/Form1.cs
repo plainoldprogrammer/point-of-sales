@@ -171,6 +171,7 @@ namespace WinFormsApp
 
                 labelTicketStatus.Text = "Ticket status: Draft";
 
+                buttonPreviousTicket.Enabled = true;
                 buttonNextTicket.Enabled = false;
             }
         }
