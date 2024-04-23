@@ -36,6 +36,7 @@ namespace WinFormsApp
             buttonRemoveItemFromTicket = new Button();
             buttonSaveTicket = new Button();
             richTextBoxTicketAmount = new RichTextBox();
+            textBoxCurrentTicketIndex = new TextBox();
             SuspendLayout();
             // 
             // listBoxTicket
@@ -84,11 +85,19 @@ namespace WinFormsApp
             richTextBoxTicketAmount.TabIndex = 4;
             richTextBoxTicketAmount.Text = "";
             // 
+            // textBoxCurrentTicketIndex
+            // 
+            textBoxCurrentTicketIndex.Location = new Point(12, 477);
+            textBoxCurrentTicketIndex.Name = "textBoxCurrentTicketIndex";
+            textBoxCurrentTicketIndex.Size = new Size(49, 27);
+            textBoxCurrentTicketIndex.TabIndex = 5;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 499);
+            ClientSize = new Size(800, 524);
+            Controls.Add(textBoxCurrentTicketIndex);
             Controls.Add(richTextBoxTicketAmount);
             Controls.Add(buttonSaveTicket);
             Controls.Add(buttonRemoveItemFromTicket);
@@ -97,6 +106,7 @@ namespace WinFormsApp
             Name = "Form1";
             Text = "Point Of Sales";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -106,5 +116,6 @@ namespace WinFormsApp
         private Button buttonRemoveItemFromTicket;
         private Button buttonSaveTicket;
         private RichTextBox richTextBoxTicketAmount;
+        private TextBox textBoxCurrentTicketIndex;
     }
 }
