@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace WinFormsApp
+namespace WinFormsApp.Models
 {
     public class Product
     {
-        public String? Name { get; set; }
+        public string? Name { get; set; }
         public int Price { get; set; }
 
-        public override String ToString()
+        public override string ToString()
         {
             return Name!;
         }

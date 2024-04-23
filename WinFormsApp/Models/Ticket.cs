@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WinFormsApp
+namespace WinFormsApp.Models
 {
     public class Ticket
     {
@@ -21,7 +21,7 @@ namespace WinFormsApp
 
             set
             {
-                this.Total = value;
+                Total = value;
             }
         }
 
