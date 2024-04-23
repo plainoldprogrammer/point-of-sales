@@ -30,7 +30,7 @@
         {
             listBoxTicket = new ListBox();
             buttonMenuItem001 = new Button();
-            removeItemFromTicketButtom = new Button();
+            buttonRemoveItemFromTicket = new Button();
             SuspendLayout();
             // 
             // listBoxTicket
@@ -51,21 +51,21 @@
             buttonMenuItem001.UseVisualStyleBackColor = true;
             buttonMenuItem001.Click += menuItemButton01_Click;
             // 
-            // removeItemFromTicketButtom
+            // buttonRemoveItemFromTicket
             // 
-            removeItemFromTicketButtom.Location = new Point(135, 442);
-            removeItemFromTicketButtom.Name = "removeItemFromTicketButtom";
-            removeItemFromTicketButtom.Size = new Size(94, 29);
-            removeItemFromTicketButtom.TabIndex = 2;
-            removeItemFromTicketButtom.Text = "Remove";
-            removeItemFromTicketButtom.UseVisualStyleBackColor = true;
+            buttonRemoveItemFromTicket.Location = new Point(135, 442);
+            buttonRemoveItemFromTicket.Name = "buttonRemoveItemFromTicket";
+            buttonRemoveItemFromTicket.Size = new Size(94, 29);
+            buttonRemoveItemFromTicket.TabIndex = 2;
+            buttonRemoveItemFromTicket.Text = "Remove";
+            buttonRemoveItemFromTicket.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 499);
-            Controls.Add(removeItemFromTicketButtom);
+            Controls.Add(buttonRemoveItemFromTicket);
             Controls.Add(buttonMenuItem001);
             Controls.Add(listBoxTicket);
             Name = "Form1";
@@ -77,6 +77,6 @@
 
         private ListBox listBoxTicket;
         private Button buttonMenuItem001;
-        private Button removeItemFromTicketButtom;
+        private Button buttonRemoveItemFromTicket;
     }
 }
