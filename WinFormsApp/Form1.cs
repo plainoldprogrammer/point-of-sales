@@ -10,6 +10,7 @@ namespace WinFormsApp
         public Ticket TicketDraft { get; set; }
         public List<Ticket> Tickets { get; set; }
         public int CurrentTicketIndex { get; set; }
+        public FormConfigure FormConfigure { get; set; }
 
         public Form1()
         {
@@ -27,6 +28,7 @@ namespace WinFormsApp
             buttonRemoveItemFromTicket.Enabled = false;
 
             labelTicketStatus.Text = "Ticket status: Draft";
+            FormConfigure = new FormConfigure();
         }
 
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
@@ -158,7 +160,6 @@ namespace WinFormsApp
 
         private void buttonConfigure_Click(object sender, EventArgs e)
         {
-
         }
 
         private Ticket GetActiveTicket()
