@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using ConsoleAppDatabaseAccess.Models;
 using ConsoleAppDatabaseAccess.Context;
@@ -37,6 +38,23 @@ namespace ConsoleAppDatabaseAccess.Persistence
             {
                 Console.WriteLine("Product can't be saved on db. Possibly already exists");
             }
+        }
+
+        public Product GetProduct(String name)
+        {
+            return context.Products.Where(x => x.Name == name).FirstOrDefault();
+        }
+        
+        public void CreateTicket(String ticketName, Product product)
+        {
+            Ticket ticket = new Ticket()
+            {
+                TicketName = ticketName,
+                Product = product
+            };
+
+            context.Tickets.Add(ticket);
+            context.SaveChanges();
         }
     }
 }

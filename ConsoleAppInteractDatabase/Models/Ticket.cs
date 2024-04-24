@@ -1,33 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
 
 namespace ConsoleAppDatabaseAccess.Models
 {
     public class Ticket
     {
-        public List<Product> Products { get; set; }
-        public int Total
-        {
-            get
-            {
-                int total = 0;
+        public int Id { get; set; }
+        public String TicketName { get; set; }
 
-                foreach (Product product in Products)
-                {
-                    total += product.Price;
-                }
-
-                return total;
-            }
-
-            set
-            {
-                Total = value;
-            }
-        }
-
-        public Ticket()
-        {
-            Products = new List<Product>();
-        }
+        public Product Product { get; set; }
     }
 }

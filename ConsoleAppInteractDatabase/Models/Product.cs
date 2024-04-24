@@ -1,10 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace ConsoleAppDatabaseAccess.Models
+﻿namespace ConsoleAppDatabaseAccess.Models
 {
     public class Product
     {
-        [Key]
         public int Id { get; set; }
 
         public string? Name { get; set; }

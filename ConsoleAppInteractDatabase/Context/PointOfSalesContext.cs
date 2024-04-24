@@ -10,6 +10,7 @@ namespace ConsoleAppDatabaseAccess.Context
         private String databasePath = "C:\\PointOfSales";
         private String databaseName = "pos_database.sqlite";
         public DbSet<Product> Products { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
 
         public PointOfSalesContext() : base()
         {
