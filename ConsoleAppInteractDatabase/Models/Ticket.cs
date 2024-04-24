@@ -13,5 +13,10 @@ namespace ConsoleAppDatabaseAccess.Models
 
         [NotMapped]
         public List<Product> Products { get; set; }
+
+        public Ticket()
+        {
+            Products = new List<Product>();
+        }
     }
 }
