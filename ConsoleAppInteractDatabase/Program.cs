@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using ConsoleAppDatabaseAccess.Persistence;
 using ConsoleAppDatabaseAccess.Models;
+using System.Linq;
 
 namespace ConsoleAppDatabaseAccess
 {
@@ -26,6 +27,17 @@ namespace ConsoleAppDatabaseAccess
             //ticket.Products.Add(dbManager.GetProduct("refresco"));
 
             //dbManager.SaveTicket(ticket);
+
+            Product product = new Product();
+            product = dbManager.context.Products.Where(x => x.Name == "milanesa").FirstOrDefault();
+
+            Order order = new Order();
+            order.Id = 1;
+            order.TicketName = "Ticket1";
+            order.Product = product;
+
+            dbManager.context.Orders.Add(order);
+            dbManager.context.SaveChanges();
 
             dbManager.CloseDb();
         }
