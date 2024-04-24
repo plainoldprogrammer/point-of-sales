@@ -74,13 +74,14 @@ namespace ConsoleAppDatabaseAccess.Persistence
                 Ticket ticket = new Ticket()
                 {
                     TicketName = ticketName,
-                    Product = product,
-                    Products = null!
+                    Product = product
                 };
 
                 context.Tickets.Add(ticket);
                 context.SaveChanges();
             }
+
+            Console.WriteLine(theTicket.Total);
         }
     }
 }

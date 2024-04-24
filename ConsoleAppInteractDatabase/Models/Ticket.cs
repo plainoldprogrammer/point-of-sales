@@ -18,5 +18,26 @@ namespace ConsoleAppDatabaseAccess.Models
         {
             Products = new List<Product>();
         }
+
+        [NotMapped]
+        public int Total
+        {
+            get
+            {
+                int total = 0;
+
+                foreach (Product product in Products)
+                {
+                    total += product.Price;
+                }
+
+                return total;
+            }
+
+            set
+            {
+                Total = value;
+            }
+        }
     }
 }
