@@ -63,5 +63,24 @@ namespace ConsoleAppDatabaseAccess.Persistence
                 context.SaveChanges();
             }
         }
+
+        public void SaveTicket(Ticket theTicket)
+        {
+            String ticketName = theTicket.TicketName;
+            List<Product> ticketProducts = theTicket.Products;
+
+            foreach (Product product in ticketProducts)
+            {
+                Ticket ticket = new Ticket()
+                {
+                    TicketName = ticketName,
+                    Product = product,
+                    Products = null!
+                };
+
+                context.Tickets.Add(ticket);
+                context.SaveChanges();
+            }
+        }
     }
 }

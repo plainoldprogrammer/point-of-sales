@@ -16,9 +16,20 @@ namespace ConsoleAppDatabaseAccess
             //dbManager.CreateProduct("caldo", 75);
             //dbManager.CreateProduct("refresco", 25);
 
-            Product product1 = dbManager.GetProduct("refresco");
-            Product product2 = dbManager.GetProduct("milanesa");
-            dbManager.CreateTicket("Ticket2", new List<Product>() { product1, product2 });
+            //Product product1 = dbManager.GetProduct("refresco");
+            //Product product2 = dbManager.GetProduct("milanesa");
+            //dbManager.CreateTicket("Ticket2", new List<Product>() { product1, product2 });
+
+            Ticket ticket = new Ticket()
+            {
+                TicketName = "Ticket3",
+                Products = new List<Product>()
+                {
+                    dbManager.GetProduct("bistec"),
+                    dbManager.GetProduct("refresco")
+                }
+            };
+            dbManager.SaveTicket(ticket);
 
             dbManager.CloseDb();
         }
