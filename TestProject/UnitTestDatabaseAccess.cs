@@ -15,6 +15,11 @@ namespace TestProject
                 dbManager.SaveProduct(new Product() { Name = "milanesa", Price = 75 });
                 dbManager.SaveProduct(new Product() { Name = "caldo", Price = 75 });
                 dbManager.SaveProduct(new Product() { Name = "refresco", Price = 25 });
+
+                int numberOfSavedProducts = 4;
+                int productsCount = dbManager.RetrieveProductsCount();
+
+                Assert.AreEqual(numberOfSavedProducts, productsCount);
             }
         }
 

@@ -50,6 +50,12 @@ namespace ConsoleAppDatabaseAccess.Persistence
             return context.Products.Where(x => x.Name == name).FirstOrDefault()!;
         }
 
+        public int RetrieveProductsCount()
+        {
+            return context.Products.Select(x => x).Count();
+        }
+
+
         public void SaveOrder(Order order)
         {
             context.Orders.Add(order);
