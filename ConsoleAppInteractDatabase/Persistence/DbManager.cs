@@ -21,14 +21,8 @@ namespace ConsoleAppDatabaseAccess.Persistence
             context.Dispose();
         }
 
-        public void CreateProduct(string name, int price)
+        public void CreateProduct(Product product)
         {
-            Product product = new Product()
-            {
-                Name = name,
-                Price = price
-            };
-
             context.Products.Add(product);
 
             try
