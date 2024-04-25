@@ -7,7 +7,7 @@ namespace TestProject
     public class UnitTestDatabaseAccess
     {
         [TestMethod]
-        public void Test_Method_001_Create_Products()
+        public void Test_Method_001_Save_Products()
         {
             using (DbManager dbManager = new DbManager())
             {
