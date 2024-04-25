@@ -35,11 +35,11 @@ namespace TestProject
         }
 
         [TestMethod]
-        public void Test_Method_003_GetTickets()
+        public void Test_Method_003_RetrieveAllOrders()
         {
             using (DbManager dbManager = new DbManager())
             {
-                var result = dbManager.RetrieveAllTickets();
+                var result = dbManager.RetrieveAllOrders();
             }
         }
     }

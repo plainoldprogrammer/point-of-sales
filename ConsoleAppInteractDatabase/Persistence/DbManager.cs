@@ -56,7 +56,7 @@ namespace ConsoleAppDatabaseAccess.Persistence
             context.SaveChanges();
         }
 
-        public IEnumerable<Order> RetrieveAllTickets()
+        public IEnumerable<Order> RetrieveAllOrders()
         {
             return context.Orders.Select(x => x).Include(x => x.Product);
         }
