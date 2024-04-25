@@ -30,7 +30,7 @@ namespace ConsoleAppDatabaseAccess
         public static void Test_Method_002_Create_Order()
         {
             Product? product = new Product();
-            product = dbManager.GetProductByName("milanesa");
+            product = dbManager.RetrieveProductByName("milanesa");
 
             Order order = new Order();
             order.TicketName = "Ticket1";
