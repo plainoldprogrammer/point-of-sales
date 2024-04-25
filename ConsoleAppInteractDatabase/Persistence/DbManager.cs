@@ -45,7 +45,7 @@ namespace ConsoleAppDatabaseAccess.Persistence
             return context.Products.Where(x => x.Name == name).FirstOrDefault()!;
         }
 
-        public Product? GetProductById(int id)
+        public Product? RetrieveProductById(int id)
         {
             return context.Products.Where(x => x.Id == id).FirstOrDefault();
         }
