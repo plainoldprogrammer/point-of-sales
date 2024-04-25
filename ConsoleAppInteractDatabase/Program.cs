@@ -21,7 +21,6 @@ namespace ConsoleAppDatabaseAccess
             product = dbManager.context.Products.Where(x => x.Name == "milanesa").FirstOrDefault();
 
             Order order = new Order();
-            order.Id = 1;
             order.TicketName = "Ticket1";
             order.Product = product;
 
