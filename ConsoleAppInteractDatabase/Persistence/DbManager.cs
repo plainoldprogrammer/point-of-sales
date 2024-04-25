@@ -23,14 +23,14 @@ namespace ConsoleAppDatabaseAccess.Persistence
 
         public void CreateProduct(Product product)
         {
-            context.Products.Add(product);
-
             try
             {
+                context.Products.Add(product);
                 context.SaveChanges();
             }
             catch (DbUpdateException)
             {
+                context.Products.Remove(product);
                 Console.WriteLine("Product can't be saved on db. Possibly already exists");
             }
         }
