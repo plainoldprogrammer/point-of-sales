@@ -40,6 +40,12 @@ namespace ConsoleAppDatabaseAccess.Persistence
             }
         }
 
+        public void RemoveProduct(Product product)
+        {
+            context.Remove(product);
+            context.SaveChanges();
+        }
+
         public Product? RetrieveProductById(int id)
         {
             return context.Products.Where(x => x.Id == id).FirstOrDefault();
