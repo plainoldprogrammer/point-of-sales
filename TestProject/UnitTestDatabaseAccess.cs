@@ -19,7 +19,7 @@ namespace TestProject
         }
 
         [TestMethod]
-        public void Test_Method_002_Create_Order()
+        public void Test_Method_002_Save_Order()
         {
             using (DbManager dbManager = new DbManager())
             {
