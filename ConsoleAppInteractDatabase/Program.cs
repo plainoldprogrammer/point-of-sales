@@ -12,10 +12,10 @@ namespace ConsoleAppDatabaseAccess
         {
             DbManager dbManager = new DbManager();
 
-            dbManager.CreateProduct("bistec", 75);
-            dbManager.CreateProduct("milanesa", 75);
-            dbManager.CreateProduct("caldo", 75);
-            dbManager.CreateProduct("refresco", 25);
+            dbManager.CreateProduct(new Product() { Name = "bistec", Price = 75 });
+            dbManager.CreateProduct(new Product() { Name = "milanesa", Price = 75 });
+            dbManager.CreateProduct(new Product() { Name = "caldo", Price = 75 });
+            dbManager.CreateProduct(new Product() { Name = "refresco", Price = 25 });
 
             Product product = new Product();
             product = dbManager.context.Products.Where(x => x.Name == "milanesa").FirstOrDefault();
