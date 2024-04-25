@@ -39,5 +39,10 @@ namespace ConsoleAppDatabaseAccess.Persistence
         {
             return context.Products.Where(x => x.Name == name).FirstOrDefault()!;
         }
+
+        public int GetProductById(int id)
+        {
+            return context.Products.Where(x => x.Id == id).FirstOrDefault();
+        }
     }
 }
