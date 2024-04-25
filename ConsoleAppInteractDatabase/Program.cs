@@ -36,7 +36,7 @@ namespace ConsoleAppDatabaseAccess
             order.TicketName = "Ticket1";
             order.Product = product!;
 
-            dbManager.CreateOrder(order);
+            dbManager.SaveOrder(order);
         }
     }
 }

@@ -50,7 +50,7 @@ namespace ConsoleAppDatabaseAccess.Persistence
             return context.Products.Where(x => x.Id == id).FirstOrDefault();
         }
 
-        public void CreateOrder(Order order)
+        public void SaveOrder(Order order)
         {
             context.Orders.Add(order);
             context.SaveChanges();
