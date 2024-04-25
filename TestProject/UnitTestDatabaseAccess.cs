@@ -28,11 +28,16 @@ namespace TestProject
         {
             using (DbManager dbManager = new DbManager())
             {
+                dbManager.SaveProduct(new Product() { Name = "bistec", Price = 75 });
+                dbManager.SaveProduct(new Product() { Name = "milanesa", Price = 75 });
+                dbManager.SaveProduct(new Product() { Name = "caldo", Price = 75 });
+                dbManager.SaveProduct(new Product() { Name = "refresco", Price = 25 });
+
                 Product? product = new Product();
                 product = dbManager.RetrieveProductByName("milanesa");
 
                 Order order = new Order();
-                order.TicketId = 2;
+                order.TicketId = 1;
                 order.Product = product!;
 
                 dbManager.SaveOrder(order);
