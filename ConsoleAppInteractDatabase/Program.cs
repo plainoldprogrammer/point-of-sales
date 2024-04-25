@@ -21,10 +21,10 @@ namespace ConsoleAppDatabaseAccess
 
         public static void Test_Method_001_Create_Products()
         {
-            dbManager.CreateProduct(new Product() { Name = "bistec", Price = 75 });
-            dbManager.CreateProduct(new Product() { Name = "milanesa", Price = 75 });
-            dbManager.CreateProduct(new Product() { Name = "caldo", Price = 75 });
-            dbManager.CreateProduct(new Product() { Name = "refresco", Price = 25 });
+            dbManager.SaveProduct(new Product() { Name = "bistec", Price = 75 });
+            dbManager.SaveProduct(new Product() { Name = "milanesa", Price = 75 });
+            dbManager.SaveProduct(new Product() { Name = "caldo", Price = 75 });
+            dbManager.SaveProduct(new Product() { Name = "refresco", Price = 25 });
         }
 
         public static void Test_Method_002_Create_Order()

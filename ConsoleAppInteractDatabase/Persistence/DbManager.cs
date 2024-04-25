@@ -26,7 +26,7 @@ namespace ConsoleAppDatabaseAccess.Persistence
             CloseDb();
         }
 
-        public void CreateProduct(Product product)
+        public void SaveProduct(Product product)
         {
             try
             {
