@@ -34,7 +34,7 @@ namespace ConsoleAppDatabaseAccess
             product = dbManager.RetrieveProductByName("milanesa");
 
             Order order = new Order();
-            order.TicketName = "Ticket1";
+            order.TicketId = 2;
             order.Product = product!;
 
             dbManager.SaveOrder(order);
