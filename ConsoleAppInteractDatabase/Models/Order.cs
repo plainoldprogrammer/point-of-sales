@@ -10,7 +10,7 @@ namespace ConsoleAppDatabaseAccess
         [Key]
         public int Id { get; set; }
 
-        public String? TicketName { get; set; }
+        public int? TicketId { get; set; }
 
         [ForeignKey("Fk_ProductId")]
         public Product Product { get; set; }

@@ -14,8 +14,9 @@ namespace ConsoleAppDatabaseAccess
         {
             using (dbManager = new DbManager())
             {
-                Test_Method_001_Create_Products();
-                Test_Method_002_Create_Order();
+                //Test_Method_001_Create_Products();
+                //Test_Method_002_Create_Order();
+                Test_Method_003_GetTickets();
             }
         }
 
@@ -37,6 +38,11 @@ namespace ConsoleAppDatabaseAccess
             order.Product = product!;
 
             dbManager.SaveOrder(order);
+        }
+
+        public static void Test_Method_003_GetTickets()
+        {
+            var result = dbManager.RetrieveAllTickets();
         }
     }
 }
