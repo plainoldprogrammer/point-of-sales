@@ -9,7 +9,7 @@ namespace ConsoleAppDatabaseAccess.Persistence
 {
     public class DbManager
     {
-        public  PointOfSalesContext context;
+        private  PointOfSalesContext context;
 
         public DbManager()
         {
@@ -43,6 +43,12 @@ namespace ConsoleAppDatabaseAccess.Persistence
         public Product? GetProductById(int id)
         {
             return context.Products.Where(x => x.Id == id).FirstOrDefault();
+        }
+
+        public void CreateOrder(Order order)
+        {
+            context.Orders.Add(order);
+            context.SaveChanges();
         }
     }
 }

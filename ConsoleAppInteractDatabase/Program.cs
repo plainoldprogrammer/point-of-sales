@@ -15,7 +15,7 @@ namespace ConsoleAppDatabaseAccess
             dbManager = new DbManager();
 
             Test_Method_001_Create_Products();
-            //Test_Method_002_Create_Order();
+            Test_Method_002_Create_Order();
 
             dbManager.CloseDb();
         }
@@ -31,14 +31,13 @@ namespace ConsoleAppDatabaseAccess
         public static void Test_Method_002_Create_Order()
         {
             Product? product = new Product();
-            product = dbManager.context.Products.Where(x => x.Name == "milanesa").FirstOrDefault();
+            product = dbManager.GetProductByName("milanesa");
 
             Order order = new Order();
             order.TicketName = "Ticket1";
             order.Product = product!;
 
-            dbManager.context.Orders.Add(order);
-            dbManager.context.SaveChanges();
+            dbManager.CreateOrder(order);
         }
     }
 }
