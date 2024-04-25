@@ -40,14 +40,14 @@ namespace ConsoleAppDatabaseAccess.Persistence
             }
         }
 
-        public Product RetrieveProductByName(String name)
-        {
-            return context.Products.Where(x => x.Name == name).FirstOrDefault()!;
-        }
-
         public Product? RetrieveProductById(int id)
         {
             return context.Products.Where(x => x.Id == id).FirstOrDefault();
+        }
+
+        public Product RetrieveProductByName(String name)
+        {
+            return context.Products.Where(x => x.Name == name).FirstOrDefault()!;
         }
 
         public void SaveOrder(Order order)
