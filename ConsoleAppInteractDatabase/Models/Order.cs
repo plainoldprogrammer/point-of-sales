@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using ConsoleAppDatabaseAccess.Models;
 
-namespace ConsoleAppDatabaseAccess
+namespace ConsoleAppDatabaseAccess.Models
 {
     public class Order
     {
