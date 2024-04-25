@@ -66,5 +66,10 @@ namespace ConsoleAppDatabaseAccess.Persistence
         {
             return context.Orders.Select(x => x).Include(x => x.Product);
         }
+
+        public int RetrieveOrdersCount()
+        {
+            return context.Orders.Count();
+        }
     }
 }

@@ -41,6 +41,11 @@ namespace TestProject
                 order.Product = product!;
 
                 dbManager.SaveOrder(order);
+
+                int numberOfSavedProducts = 1;
+                int ordersCount = dbManager.RetrieveOrdersCount();
+
+                Assert.AreEqual(numberOfSavedProducts, ordersCount);
             }    
         }
 
