@@ -41,7 +41,7 @@ namespace ConsoleAppDatabaseAccess.Persistence
             }
         }
 
-        public Product GetProduct(String name)
+        public Product GetProductByName(String name)
         {
             return context.Products.Where(x => x.Name == name).FirstOrDefault()!;
         }
