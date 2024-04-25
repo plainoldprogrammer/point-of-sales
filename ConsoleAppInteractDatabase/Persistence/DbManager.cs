@@ -7,7 +7,7 @@ using ConsoleAppDatabaseAccess.Context;
 
 namespace ConsoleAppDatabaseAccess.Persistence
 {
-    public class DbManager
+    public class DbManager : IDisposable
     {
         private  PointOfSalesContext context;
 
@@ -19,6 +19,11 @@ namespace ConsoleAppDatabaseAccess.Persistence
         public void CloseDb()
         {
             context.Dispose();
+        }
+
+        public void Dispose()
+        {
+            CloseDb();
         }
 
         public void CreateProduct(Product product)

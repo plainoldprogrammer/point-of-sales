@@ -12,12 +12,11 @@ namespace ConsoleAppDatabaseAccess
 
         public static void Main(String[] args)
         {
-            dbManager = new DbManager();
-
-            Test_Method_001_Create_Products();
-            Test_Method_002_Create_Order();
-
-            dbManager.CloseDb();
+            using (dbManager = new DbManager())
+            {
+                Test_Method_001_Create_Products();
+                Test_Method_002_Create_Order();
+            }
         }
 
         public static void Test_Method_001_Create_Products()
