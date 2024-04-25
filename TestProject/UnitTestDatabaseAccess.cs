@@ -7,7 +7,7 @@ namespace TestProject
     public class UnitTestDatabaseAccess
     {
         [TestMethod]
-        public void Test_Method_001_Save_Products()
+        public void TestMethod_001_Save_Products()
         {
             using (DbManager dbManager = new DbManager())
             {
@@ -19,7 +19,7 @@ namespace TestProject
         }
 
         [TestMethod]
-        public void Test_Method_002_Save_Order()
+        public void TestMethod_002_Save_Order()
         {
             using (DbManager dbManager = new DbManager())
             {
@@ -35,7 +35,7 @@ namespace TestProject
         }
 
         [TestMethod]
-        public void Test_Method_003_RetrieveAllOrders()
+        public void TestMethod_003_RetrieveAllOrders()
         {
             using (DbManager dbManager = new DbManager())
             {
