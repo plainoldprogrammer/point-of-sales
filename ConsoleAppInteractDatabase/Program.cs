@@ -17,12 +17,12 @@ namespace ConsoleAppDatabaseAccess
             dbManager.CreateProduct(new Product() { Name = "caldo", Price = 75 });
             dbManager.CreateProduct(new Product() { Name = "refresco", Price = 25 });
 
-            Product product = new Product();
+            Product? product = new Product();
             product = dbManager.context.Products.Where(x => x.Name == "milanesa").FirstOrDefault();
 
             Order order = new Order();
             order.TicketName = "Ticket1";
-            order.Product = product;
+            order.Product = product!;
 
             dbManager.context.Orders.Add(order);
             dbManager.context.SaveChanges();
