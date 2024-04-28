@@ -21,6 +21,7 @@ namespace WinFormsApp
             ConfigureTicket();
             ConfigureProducts();
             UpdateMenuBasedOnNewProductsConfiguration();
+
             FormConfigure = new FormConfigureMenu(Products!);
         }
 
