@@ -13,6 +13,7 @@ namespace WinFormsApp
         public int CurrentTicketIndex { get; set; }
         public FormConfigureMenu FormConfigure { get; set; }
         public List<Product> Products { get; set; }
+        public const String CURRENT_SOFTWARE_VERSION = "0.1 (Alpha)";
 
         public FormMain()
         {
@@ -23,6 +24,8 @@ namespace WinFormsApp
             UpdateMenuBasedOnNewProductsConfiguration();
 
             FormConfigure = new FormConfigureMenu(Products!);
+
+            Text = $"Point Of Sales {CURRENT_SOFTWARE_VERSION}";
         }
 
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
