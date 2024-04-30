@@ -11,6 +11,7 @@ namespace TestProject
         {
             using (DbManager dbManager = new DbManager())
             {
+                // Testing the creation and saving of the products.
                 Product product1 = new Product() { Name = "bistec", Price = 75 };
                 Product product2 = new Product() { Name = "milanesa", Price = 75 };
                 Product product3 = new Product() { Name = "caldo", Price = 75 };
@@ -27,7 +28,7 @@ namespace TestProject
                 Assert.AreEqual(numberOfSavedProducts, productsCount);
 
 
-
+                // Testing querying and removing the products.
                 product1 = dbManager.RetrieveProductById(1);
                 product2 = dbManager.RetrieveProductById(2);
                 product3 = dbManager.RetrieveProductById(3);
