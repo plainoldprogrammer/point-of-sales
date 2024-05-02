@@ -78,6 +78,7 @@ namespace TestProject
         {
             using (DbManager dbManager = new DbManager())
             {
+                //Testing the orders retrieval.
                 var result = dbManager.RetrieveAllOrders();
             }
         }
