@@ -12,10 +12,10 @@ namespace TestProject
             using (DbManager dbManager = new DbManager())
             {
                 // Testing the creation and saving of the products.
-                Product product1 = new Product() { Name = "bistec", Price = 75 };
-                Product product2 = new Product() { Name = "milanesa", Price = 75 };
-                Product product3 = new Product() { Name = "caldo", Price = 75 };
-                Product product4 = new Product() { Name = "refresco", Price = 25 };
+                Product product1 = new Product() { Name = "Burger", Price = 75 };
+                Product product2 = new Product() { Name = "Steak", Price = 75 };
+                Product product3 = new Product() { Name = "Soup", Price = 75 };
+                Product product4 = new Product() { Name = "Soda", Price = 25 };
 
                 dbManager.SaveProduct(product1);
                 dbManager.SaveProduct(product2);
