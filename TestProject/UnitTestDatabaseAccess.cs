@@ -52,13 +52,13 @@ namespace TestProject
             using (DbManager dbManager = new DbManager())
             {
                 //Testing the saving of the order.
-                dbManager.SaveProduct(new Product() { Name = "bistec", Price = 75 });
-                dbManager.SaveProduct(new Product() { Name = "milanesa", Price = 75 });
-                dbManager.SaveProduct(new Product() { Name = "caldo", Price = 75 });
-                dbManager.SaveProduct(new Product() { Name = "refresco", Price = 25 });
+                dbManager.SaveProduct(new Product() { Name = "Steak", Price = 75 });
+                dbManager.SaveProduct(new Product() { Name = "Minalese", Price = 75 });
+                dbManager.SaveProduct(new Product() { Name = "Soup", Price = 75 });
+                dbManager.SaveProduct(new Product() { Name = "Soda", Price = 25 });
 
                 Product? product = new Product();
-                product = dbManager.RetrieveProductByName("milanesa");
+                product = dbManager.RetrieveProductByName("Minalese");
 
                 Order order = new Order();
                 order.TicketId = 1;
