@@ -51,7 +51,7 @@ namespace TestProject
         {
             using (DbManager dbManager = new DbManager())
             {
-                //Testing the saving of the order.
+                // Testing the saving of the order.
                 dbManager.SaveProduct(new Product() { Name = "Steak", Price = 75 });
                 dbManager.SaveProduct(new Product() { Name = "Minalese", Price = 75 });
                 dbManager.SaveProduct(new Product() { Name = "Soup", Price = 75 });
