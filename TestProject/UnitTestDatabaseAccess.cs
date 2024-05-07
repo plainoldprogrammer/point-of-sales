@@ -26,7 +26,6 @@ namespace TestProject
 
                 int numberOfSavedProducts = 4;
                 int productsCount = dbManager.RetrieveProductsCount();
-
                 Assert.AreEqual(numberOfSavedProducts, productsCount);
 
 
@@ -43,7 +42,6 @@ namespace TestProject
 
                 int numberOfProductsInDb = 0;
                 productsCount = dbManager.RetrieveProductsCount();
-
                 Assert.AreEqual(numberOfProductsInDb, productsCount);
             }
         }
@@ -53,6 +51,9 @@ namespace TestProject
         {
             using (DbManager dbManager = new DbManager())
             {
+                dbManager.ResetProductsTablePK();
+                dbManager.ResetOrdersTablePK();
+
                 // Testing the saving of the order.
                 dbManager.SaveProduct(new Product() { Name = "Steak", Price = 75 });
                 dbManager.SaveProduct(new Product() { Name = "Minalese", Price = 75 });
@@ -70,8 +71,28 @@ namespace TestProject
 
                 int numberOfSavedProducts = 1;
                 int ordersCount = dbManager.RetrieveOrdersCount();
-
                 Assert.AreEqual(numberOfSavedProducts, ordersCount);
+
+
+                // Testing querying and removing the products.
+                dbManager.RemoveOrder(order);
+                Product product1 = dbManager.RetrieveProductById(1);
+                Product product2 = dbManager.RetrieveProductById(2);
+                Product product3 = dbManager.RetrieveProductById(3);
+                Product product4 = dbManager.RetrieveProductById(4);
+                
+                dbManager.RemoveProduct(product1);
+                dbManager.RemoveProduct(product2);
+                dbManager.RemoveProduct(product3);
+                dbManager.RemoveProduct(product4);
+
+                int numberOfOrdersInDb = 0;
+                ordersCount = dbManager.RetrieveOrdersCount();
+                Assert.AreEqual(numberOfOrdersInDb, ordersCount);
+
+                int numberOfProductsInDb = 0;
+                int productsCount = dbManager.RetrieveProductsCount();
+                Assert.AreEqual(numberOfProductsInDb, productsCount);
             }    
         }
 

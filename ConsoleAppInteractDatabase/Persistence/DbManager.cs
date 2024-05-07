@@ -32,6 +32,12 @@ namespace ConsoleAppDatabaseAccess.Persistence
             context.SaveChanges();
         }
 
+        public void ResetOrdersTablePK()
+        {
+            context.Database.ExecuteSqlRaw("DELETE FROM sqlite_sequence WHERE name='Orders';");
+            context.SaveChanges();
+        }
+
         public void SaveProduct(Product product)
         {
             try
@@ -67,10 +73,15 @@ namespace ConsoleAppDatabaseAccess.Persistence
             return context.Products.Select(x => x).Count();
         }
 
-
         public void SaveOrder(Order order)
         {
             context.Orders.Add(order);
+            context.SaveChanges();
+        }
+
+        public void RemoveOrder(Order order)
+        {
+            context.Remove(order);
             context.SaveChanges();
         }
 
