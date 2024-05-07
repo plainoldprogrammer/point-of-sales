@@ -102,7 +102,9 @@ namespace TestProject
             using (DbManager dbManager = new DbManager())
             {
                 //Testing the orders retrieval.
-                var result = dbManager.RetrieveAllOrders();
+                int numberOfOrders = 0;
+                var allOrders = dbManager.RetrieveAllOrders();
+                Assert.AreEqual(numberOfOrders, allOrders.Count());
             }
         }
     }
