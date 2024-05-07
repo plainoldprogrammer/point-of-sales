@@ -24,9 +24,9 @@ namespace TestProject
                 dbManager.SaveProduct(product3);
                 dbManager.SaveProduct(product4);
 
-                int numberOfSavedProducts = 4;
+                int expectedNumberOfSavedProducts = 4;
                 int productsCount = dbManager.RetrieveProductsCount();
-                Assert.AreEqual(numberOfSavedProducts, productsCount);
+                Assert.AreEqual(expectedNumberOfSavedProducts, productsCount);
 
 
                 // Testing querying and removing the products.
@@ -40,9 +40,9 @@ namespace TestProject
                 dbManager.RemoveProduct(product3);
                 dbManager.RemoveProduct(product4);
 
-                int numberOfProductsInDb = 0;
+                int expectedNumberOfProducts = 0;
                 productsCount = dbManager.RetrieveProductsCount();
-                Assert.AreEqual(numberOfProductsInDb, productsCount);
+                Assert.AreEqual(expectedNumberOfProducts, productsCount);
             }
         }
 
@@ -69,9 +69,9 @@ namespace TestProject
 
                 dbManager.SaveOrder(order);
 
-                int numberOfSavedProducts = 1;
+                int expectedNumberOfSavedProducts = 1;
                 int ordersCount = dbManager.RetrieveOrdersCount();
-                Assert.AreEqual(numberOfSavedProducts, ordersCount);
+                Assert.AreEqual(expectedNumberOfSavedProducts, ordersCount);
 
 
                 // Testing querying and removing the products.
@@ -86,13 +86,13 @@ namespace TestProject
                 dbManager.RemoveProduct(product3);
                 dbManager.RemoveProduct(product4);
 
-                int numberOfOrdersInDb = 0;
+                int expectedNumberOfOrders = 0;
                 ordersCount = dbManager.RetrieveOrdersCount();
-                Assert.AreEqual(numberOfOrdersInDb, ordersCount);
+                Assert.AreEqual(expectedNumberOfOrders, ordersCount);
 
-                int numberOfProductsInDb = 0;
+                int expectedNumberOfProducts = 0;
                 int productsCount = dbManager.RetrieveProductsCount();
-                Assert.AreEqual(numberOfProductsInDb, productsCount);
+                Assert.AreEqual(expectedNumberOfProducts, productsCount);
             }    
         }
 
@@ -102,9 +102,9 @@ namespace TestProject
             using (DbManager dbManager = new DbManager())
             {
                 //Testing the orders retrieval.
-                int numberOfOrders = 0;
-                var allOrders = dbManager.RetrieveAllOrders();
-                Assert.AreEqual(numberOfOrders, allOrders.Count());
+                int expectedNumberOfOrders = 0;
+                var ordersCount = dbManager.RetrieveAllOrders().Count();
+                Assert.AreEqual(expectedNumberOfOrders, ordersCount);
             }
         }
     }
