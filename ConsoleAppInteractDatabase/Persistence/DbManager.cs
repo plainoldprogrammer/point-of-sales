@@ -26,6 +26,12 @@ namespace ConsoleAppDatabaseAccess.Persistence
             CloseDb();
         }
 
+        public void ResetProductsTablePK()
+        {
+            context.Database.ExecuteSqlRaw("DELETE FROM sqlite_sequence WHERE name='Products';");
+            context.SaveChanges();
+        }
+
         public void SaveProduct(Product product)
         {
             try

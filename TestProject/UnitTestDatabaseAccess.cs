@@ -11,6 +11,8 @@ namespace TestProject
         {
             using (DbManager dbManager = new DbManager())
             {
+                dbManager.ResetProductsTablePK();
+
                 // Testing the creation and saving of the products.
                 Product product1 = new Product() { Name = "Burger", Price = 75 };
                 Product product2 = new Product() { Name = "Steak", Price = 75 };
