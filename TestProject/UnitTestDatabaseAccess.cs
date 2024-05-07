@@ -29,6 +29,7 @@ namespace TestProject
                 Assert.AreEqual(expectedNumberOfSavedProducts, productsCount);
 
 
+
                 // Testing querying and removing the products.
                 product1 = dbManager.RetrieveProductById(1);
                 product2 = dbManager.RetrieveProductById(2);
@@ -74,6 +75,7 @@ namespace TestProject
                 Assert.AreEqual(expectedNumberOfSavedProducts, ordersCount);
 
 
+
                 // Testing querying and removing the products.
                 dbManager.RemoveOrder(order);
                 Product product1 = dbManager.RetrieveProductById(1);
@@ -101,7 +103,7 @@ namespace TestProject
         {
             using (DbManager dbManager = new DbManager())
             {
-                //Testing the orders retrieval.
+                // Testing the orders retrieval.
                 int expectedNumberOfOrders = 0;
                 var ordersCount = dbManager.RetrieveAllOrders().Count();
                 Assert.AreEqual(expectedNumberOfOrders, ordersCount);
