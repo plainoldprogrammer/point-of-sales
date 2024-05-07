@@ -88,8 +88,18 @@ namespace ConsoleAppDatabaseAccess.Persistence
                 Order order = new Order();
 
                 Product productInTheDb = RetrieveProductByName(product.Name);
-                order.Product = productInTheDb;
+                if (productInTheDb != null)
+                {
+                    order.Product = productInTheDb;
+                }
+                else
+                {
+                    context.Products.Add(product);
+                    context.SaveChanges();
 
+                    order.Product = product;
+                }
+                
                 context.Orders.Add(order);
                 context.SaveChanges();
             }
