@@ -183,7 +183,7 @@ namespace WinFormsApp
             Products = new List<Product>();
 
             Product product001 = new Product();
-            product001.Name = "Refresco";
+            product001.Name = "Soda";
             product001.Price = 24;
 
             Product product002 = new Product();
