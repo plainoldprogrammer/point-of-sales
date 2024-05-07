@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
 using ConsoleAppDatabaseAccess.Models;
+using ConsoleAppDatabaseAccess.Persistence;
 
 namespace WinFormsApp
 {
@@ -69,7 +70,8 @@ namespace WinFormsApp
 
         private void buttonSaveTicket_Click(object sender, EventArgs e)
         {
-            Tickets.Add(TicketDraft);
+            Ticket ticketToSave = TicketDraft;
+            Tickets.Add(ticketToSave);
             listBoxTicket.Items.Clear();
             TicketDraft = new Ticket();
 
@@ -79,6 +81,11 @@ namespace WinFormsApp
             textBoxTicketsCount.Text = $"{Tickets.Count + 1}";
 
             buttonPreviousTicket.Enabled = true;
+
+            using (DbManager dbManager = new DbManager())
+            {
+                dbManager.SaveOrdersFromTicket(ticketToSave);
+            }
         }
 
         private void buttonPreviousTicket_Click(object sender, EventArgs e)

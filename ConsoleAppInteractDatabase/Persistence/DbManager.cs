@@ -79,6 +79,22 @@ namespace ConsoleAppDatabaseAccess.Persistence
             context.SaveChanges();
         }
 
+        public void SaveOrdersFromTicket(Ticket ticket)
+        {
+            var products = ticket.Products;
+
+            foreach (var product in products)
+            {
+                Order order = new Order();
+
+                Product productInTheDb = RetrieveProductByName(product.Name);
+                order.Product = productInTheDb;
+
+                context.Orders.Add(order);
+                context.SaveChanges();
+            }
+        }
+
         public void RemoveOrder(Order order)
         {
             context.Remove(order);
