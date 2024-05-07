@@ -83,6 +83,7 @@ namespace ConsoleAppDatabaseAccess.Persistence
         {
             var products = ticket.Products;
 
+            // Each product on a ticket is saved as an individual order.
             foreach (var product in products)
             {
                 Order order = new Order();
