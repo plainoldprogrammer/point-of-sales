@@ -59,7 +59,6 @@ namespace WinFormsApp
             buttonMenuItem001.Name = "buttonMenuItem001";
             buttonMenuItem001.Size = new Size(90, 90);
             buttonMenuItem001.TabIndex = 1;
-            buttonMenuItem001.Text = "Quesadilla";
             buttonMenuItem001.UseVisualStyleBackColor = true;
             buttonMenuItem001.Click += buttonMenuItem001_Click;
             // 
@@ -140,7 +139,6 @@ namespace WinFormsApp
             buttonMenuItem002.Name = "buttonMenuItem002";
             buttonMenuItem002.Size = new Size(90, 90);
             buttonMenuItem002.TabIndex = 10;
-            buttonMenuItem002.Text = "Milanesa";
             buttonMenuItem002.UseVisualStyleBackColor = true;
             buttonMenuItem002.Click += buttonMenuItem002_Click;
             // 
