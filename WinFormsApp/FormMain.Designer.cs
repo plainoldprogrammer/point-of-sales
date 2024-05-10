@@ -170,7 +170,6 @@ namespace WinFormsApp
             Controls.Add(buttonMenuItem001);
             Controls.Add(listBoxTicket);
             Name = "FormMain";
-            Text = "Point Of Sales";
             ResumeLayout(false);
             PerformLayout();
         }
