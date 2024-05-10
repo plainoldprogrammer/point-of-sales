@@ -26,7 +26,7 @@ namespace WinFormsApp
 
             FormConfigure = new FormConfigureMenu(Products!);
 
-            Text = $"Point Of Sales {CURRENT_SOFTWARE_VERSION}";
+            Text = $"Point Of Sales v{CURRENT_SOFTWARE_VERSION}";
         }
 
         private void buttonRemoveItemFromTicket_Click(object sender, EventArgs e)
