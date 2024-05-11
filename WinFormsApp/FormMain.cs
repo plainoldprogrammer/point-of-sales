@@ -52,7 +52,6 @@ namespace WinFormsApp
                 if (selectedIndex == listBoxTicket.Items.Count)
                 {
                     listBoxTicket.SelectedIndex = listBoxTicket.Items.Count - 1;
-
                 }
                 else
                 {
