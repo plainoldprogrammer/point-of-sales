@@ -14,10 +14,7 @@ namespace ConsoleAppDatabaseAccess.Models
         [NotMapped]
         public List<Product> Products { get; set; }
 
-        public Ticket()
-        {
-            Products = new List<Product>();
-        }
+        public Ticket() => Products = new List<Product>();
 
         [NotMapped]
         public int Total
