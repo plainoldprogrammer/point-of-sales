@@ -43,7 +43,7 @@ namespace WinFormsApp
             labelTicketStatus = new Label();
             buttonMenuItem002 = new Button();
             buttonConfigureMenu = new Button();
-            button1 = new Button();
+            settingsButton = new Button();
             SuspendLayout();
             // 
             // listBoxTicket
@@ -153,21 +153,21 @@ namespace WinFormsApp
             buttonConfigureMenu.UseVisualStyleBackColor = true;
             buttonConfigureMenu.Click += buttonConfigure_Click;
             // 
-            // button1
+            // settingsButton
             // 
-            button1.Location = new Point(694, 532);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 12;
-            button1.Text = "Settings";
-            button1.UseVisualStyleBackColor = true;
+            settingsButton.Location = new Point(694, 532);
+            settingsButton.Name = "settingsButton";
+            settingsButton.Size = new Size(94, 29);
+            settingsButton.TabIndex = 12;
+            settingsButton.Text = "Settings";
+            settingsButton.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 569);
-            Controls.Add(button1);
+            Controls.Add(settingsButton);
             Controls.Add(buttonConfigureMenu);
             Controls.Add(buttonMenuItem002);
             Controls.Add(labelTicketStatus);
@@ -199,6 +199,6 @@ namespace WinFormsApp
         private Label labelTicketStatus;
         private Button buttonMenuItem002;
         private Button buttonConfigureMenu;
-        private Button button1;
+        private Button settingsButton;
     }
 }
