@@ -16,6 +16,7 @@ namespace WinFormsApp
 
             Products = products;
             ConfigureMenuEntriesFromProducts();
+
             Text = "Configure Menu";
         }
 
