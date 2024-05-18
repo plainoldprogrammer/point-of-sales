@@ -230,7 +230,7 @@ namespace WinFormsApp
             Ticket currentTicket = GetActiveTicket();
             currentTicket.Products.Add(product);
 
-            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count}\nTotal: ${TicketDraft.Total}";
+            richTextBoxTicketAmount.Text = $"Items: {listBoxTicket.Items.Count} {System.Environment.NewLine} Total: ${TicketDraft.Total}";
 
             buttonRemoveItemFromTicket.Enabled = Enabled;
         }
