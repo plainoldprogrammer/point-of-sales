@@ -84,7 +84,7 @@
             buttonCancel.UseVisualStyleBackColor = true;
             buttonCancel.Click += buttonCancel_Click;
             // 
-            // FormConfigure
+            // FormConfigureMenu
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -95,8 +95,7 @@
             Controls.Add(textBoxMenuItem002Name);
             Controls.Add(textBoxMenuItem001Price);
             Controls.Add(textBoxMenuItem001Name);
-            Name = "FormConfigure";
-            Text = "Configure Menu";
+            Name = "FormConfigureMenu";
             ResumeLayout(false);
             PerformLayout();
         }
