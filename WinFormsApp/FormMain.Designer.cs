@@ -161,6 +161,7 @@ namespace WinFormsApp
             settingsButton.TabIndex = 12;
             settingsButton.Text = "Settings";
             settingsButton.UseVisualStyleBackColor = true;
+            settingsButton.Click += settingsButton_Click;
             // 
             // FormMain
             // 

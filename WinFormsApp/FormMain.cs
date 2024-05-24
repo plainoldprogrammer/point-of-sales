@@ -244,5 +244,10 @@ namespace WinFormsApp
         {
             AddProductToTheTicket(Products.ElementAt(1));
         }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
