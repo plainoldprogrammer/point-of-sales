@@ -26,6 +26,7 @@ namespace WinFormsApp
             UpdateMenuBasedOnNewProductsConfiguration();
 
             FormConfigure = new FormConfigureMenu(Products!);
+            FormSettings = new FormSettings();
 
             Text = $"Point Of Sales v{CURRENT_SOFTWARE_VERSION}";
         }
