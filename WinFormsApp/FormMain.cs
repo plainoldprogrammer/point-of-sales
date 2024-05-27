@@ -249,7 +249,7 @@ namespace WinFormsApp
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
-
+            FormSettings.ShowDialog();
         }
     }
 }
