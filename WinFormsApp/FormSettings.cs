@@ -7,6 +7,8 @@ namespace WinFormsApp
         public FormSettings()
         {
             InitializeComponent();
+
+            Text = "Settings";
         }
     }
 }
