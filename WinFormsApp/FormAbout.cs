@@ -7,6 +7,8 @@ namespace WinFormsApp
         public FormAbout()
         {
             InitializeComponent();
+
+            Text = "About";
         }
     }
 }
