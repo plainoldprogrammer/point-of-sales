@@ -16,6 +16,7 @@ namespace WinFormsApp
         public List<Product> Products { get; set; }
         public const String CURRENT_SOFTWARE_VERSION = "0.1 (Alpha)";
         public FormSettings FormSettings { get; set; }
+        public FormAbout FormAbout { get; set; }
 
         public FormMain()
         {
