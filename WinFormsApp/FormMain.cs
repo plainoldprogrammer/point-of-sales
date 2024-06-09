@@ -28,6 +28,7 @@ namespace WinFormsApp
 
             FormConfigure = new FormConfigureMenu(Products!);
             FormSettings = new FormSettings();
+            FormAbout = new FormAbout();
 
             Text = $"Point Of Sales v{CURRENT_SOFTWARE_VERSION}";
         }
