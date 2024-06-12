@@ -7,6 +7,7 @@ namespace WinFormsApp
     {
         private String Message { get; set; }
         private String Author { get; set; }
+        private String ReleaseDate { get; set; }
 
         public FormAbout()
         {
