@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             buttonOk = new System.Windows.Forms.Button();
-            button2 = new System.Windows.Forms.Button();
+            buttonCancel = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // buttonOk
@@ -41,21 +41,21 @@
             buttonOk.Text = "Ok";
             buttonOk.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonCancel
             // 
-            button2.Location = new System.Drawing.Point(558, 512);
-            button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(94, 29);
-            button2.TabIndex = 1;
-            button2.Text = "Cancel";
-            button2.UseVisualStyleBackColor = true;
+            buttonCancel.Location = new System.Drawing.Point(558, 512);
+            buttonCancel.Name = "buttonCancel";
+            buttonCancel.Size = new System.Drawing.Size(94, 29);
+            buttonCancel.TabIndex = 1;
+            buttonCancel.Text = "Cancel";
+            buttonCancel.UseVisualStyleBackColor = true;
             // 
             // FormSettings
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(675, 553);
-            Controls.Add(button2);
+            Controls.Add(buttonCancel);
             Controls.Add(buttonOk);
             Name = "FormSettings";
             Text = "Settings";
@@ -65,6 +65,6 @@
         #endregion
 
         private System.Windows.Forms.Button buttonOk;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }
