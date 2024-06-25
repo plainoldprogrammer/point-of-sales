@@ -10,5 +10,10 @@ namespace WinFormsApp
 
             Text = "Settings";
         }
+
+        private void buttonOk_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
