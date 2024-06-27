@@ -18,7 +18,7 @@ namespace WinFormsApp
 
         private void buttonCancel_Click(object sender, System.EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
