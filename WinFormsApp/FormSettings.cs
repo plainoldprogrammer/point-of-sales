@@ -13,7 +13,7 @@ namespace WinFormsApp
 
         private void buttonOk_Click(object sender, System.EventArgs e)
         {
-
+            this.Close();
         }
 
         private void buttonCancel_Click(object sender, System.EventArgs e)
