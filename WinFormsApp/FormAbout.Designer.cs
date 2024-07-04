@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new System.Windows.Forms.Button();
+            buttonOk = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
-            // button1
+            // buttonOk
             // 
-            button1.Location = new System.Drawing.Point(171, 318);
-            button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(141, 44);
-            button1.TabIndex = 0;
-            button1.Text = "Ok";
-            button1.UseVisualStyleBackColor = true;
+            buttonOk.Location = new System.Drawing.Point(171, 318);
+            buttonOk.Margin = new System.Windows.Forms.Padding(4);
+            buttonOk.Name = "buttonOk";
+            buttonOk.Size = new System.Drawing.Size(141, 44);
+            buttonOk.TabIndex = 0;
+            buttonOk.Text = "Ok";
+            buttonOk.UseVisualStyleBackColor = true;
             // 
             // FormAbout
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(500, 408);
-            Controls.Add(button1);
-            Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Controls.Add(buttonOk);
+            Margin = new System.Windows.Forms.Padding(4);
             Name = "FormAbout";
             Text = "FormAbout";
             ResumeLayout(false);
@@ -55,6 +55,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonOk;
     }
 }
