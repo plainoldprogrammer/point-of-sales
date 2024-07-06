@@ -49,7 +49,6 @@
             Controls.Add(buttonOk);
             Margin = new System.Windows.Forms.Padding(4);
             Name = "FormAbout";
-            Text = "FormAbout";
             ResumeLayout(false);
         }
 
