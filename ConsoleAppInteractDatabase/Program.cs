@@ -4,7 +4,7 @@ namespace ConsoleAppDatabaseAccess
 {
     public class Program
     {
-        // Main method only for testing purposes.
+        // Main method only for db testing purposes.
         public static void Main(String[] args)
         {
         }
