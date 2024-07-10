@@ -9,6 +9,7 @@ namespace ConsoleAppDatabaseAccess.Context
     {
         private String databasePath = "C:\\Plainoldprogrammer_dev\\PointOfSales";
         private String databaseName = "pos_database.sqlite";
+
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
 

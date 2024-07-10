@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp", "WinFormsApp\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppDatabaseAccess", "ConsoleAppInteractDatabase\ConsoleAppDatabaseAccess.csproj", "{3D61E2F6-857E-4890-A560-22E13C85D35B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{48C7A1F2-7D4C-4FA0-9445-BCAB3BCADE4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject", "TestProject\TestProject.csproj", "{48C7A1F2-7D4C-4FA0-9445-BCAB3BCADE4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
