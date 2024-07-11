@@ -48,6 +48,7 @@ namespace ConsoleAppDatabaseAccess.Persistence
             catch (DbUpdateException)
             {
                 context.Products.Remove(product);
+
                 Console.WriteLine("Product can't be saved on db. Possibly already exists");
             }
         }
