@@ -1,6 +1,7 @@
 ﻿namespace WinFormsApp
 {
-    internal class Settings
+    public class Settings
     {
+
     }
 }
