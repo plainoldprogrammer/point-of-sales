@@ -6,5 +6,6 @@ namespace WinFormsApp
     {
         public String CurrencySymbol { get; set; } = "$";
         public String Language { get; set; } = "";
+        public String Theme { get; set; } = "";
     }
 }
