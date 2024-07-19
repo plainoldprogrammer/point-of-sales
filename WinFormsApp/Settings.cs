@@ -8,5 +8,6 @@ namespace WinFormsApp
         public String Language { get; set; } = "";
         public String Theme { get; set; } = "";
         public String User { get; set; } = "";
+        public String Mode { get; set; } = "";
     }
 }
