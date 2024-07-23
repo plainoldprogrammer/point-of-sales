@@ -10,5 +10,6 @@ namespace WinFormsApp
         public String User { get; set; } = "";
         public String Mode { get; set; } = "";
         public String TimeZone { get; set; } = "";
+        public String Theme { get; set; } = "";
     }
 }
