@@ -12,5 +12,6 @@ namespace WinFormsApp
         public String TimeZone { get; set; } = "";
         public String FontFamily { get; set; } = "";
         public String FontSize { get; set; } = "";
+        public String FontColor { get; set; } = "";
     }
 }
