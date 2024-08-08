@@ -13,5 +13,6 @@ namespace WinFormsApp
         public String FontFamily { get; set; } = "";
         public String FontSize { get; set; } = "";
         public String FontColor { get; set; } = "";
+        public String FontStyle { get; set; } = "";
     }
 }
