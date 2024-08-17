@@ -15,5 +15,6 @@ namespace WinFormsApp
         public String FontColor { get; set; } = "";
         public String FontStyle { get; set; } = "";
         public String TicketColor { get; set; } = "";
+        public String TicketFontColor { get; set; } = "";
     }
 }
